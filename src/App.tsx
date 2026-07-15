@@ -21,7 +21,7 @@
 // ─────────────────────────────────────────────────────────────
 
 
-import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import AnimatedPage from './components/layout/AnimatedPage'
 import TopNav from './components/layout/TopNav'
@@ -71,10 +71,10 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <TopNav />
       <AnimatedRoutes />
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
