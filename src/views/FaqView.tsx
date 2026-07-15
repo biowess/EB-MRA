@@ -518,7 +518,7 @@ export default function FaqView() {
                 EB-MRA takes 10–20 minutes and runs entirely in your browser — no account needed,
                 no data collected.
               </p>
-              <Link to="/assessment" className={styles.ctaBtn} id="faq-cta-start" aria-label="Begin the EBM Readiness Assessment">
+              <Link to="/assessment" className={styles.ctaBtn} id="faq-cta-start" aria-label="Begin the Medical Readiness Assessment">
                 Start Assessment
                 <span className={styles.ctaBtnArrow} aria-hidden="true">
                   <svg
