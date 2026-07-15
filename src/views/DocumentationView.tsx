@@ -116,6 +116,14 @@ const VALIDITY_CHECKS = [
 // ── Component ─────────────────────────────────────────────────
 
 export default function DocumentationView() {
+  const scrollToSection = (e: any, id: string) => {
+    e.preventDefault()
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <PageShell
       label="Technical Documentation"
@@ -160,26 +168,26 @@ export default function DocumentationView() {
         <nav className={styles.toc} aria-label="Documentation sections">
           <span className={styles.tocTitle}>On this page</span>
           <ol className={styles.tocList}>
-            <li className={styles.tocItem}><a href="#part1">Part 1 — Architecture</a></li>
-            <li className={styles.tocItemSub}><a href="#goals">Assessment Goals</a></li>
-            <li className={styles.tocItemSub}><a href="#philosophy">Design Philosophy</a></li>
-            <li className={styles.tocItemSub}><a href="#limitations">Scientific Limitations</a></li>
-            <li className={styles.tocItemSub}><a href="#users">Intended Users</a></li>
-            <li className={styles.tocItemSub}><a href="#exclusions">Exclusion Criteria</a></li>
-            <li className={styles.tocItem}><a href="#part2">Part 2 — Domains</a></li>
-            <li className={styles.tocItemSub}><a href="#domains">All 8 Domains</a></li>
-            <li className={styles.tocItemSub}><a href="#item-types">Item Types</a></li>
-            <li className={styles.tocItem}><a href="#part3">Part 3 — Scoring</a></li>
-            <li className={styles.tocItemSub}><a href="#pipeline">Scoring Pipeline</a></li>
-            <li className={styles.tocItemSub}><a href="#bands">Score Bands</a></li>
-            <li className={styles.tocItemSub}><a href="#validity">Validity Checks</a></li>
-            <li className={styles.tocItemSub}><a href="#confidence">Confidence Rating</a></li>
-            <li className={styles.tocItemSub}><a href="#interactions">Interaction Rules</a></li>
-            <li className={styles.tocItemSub}><a href="#safety-gate">Safety Gate</a></li>
-            <li className={styles.tocItem}><a href="#part4">Part 4 — Report Engine</a></li>
-            <li className={styles.tocItemSub}><a href="#report-principles">Design Principles</a></li>
-            <li className={styles.tocItemSub}><a href="#report-fragments">Fragment Structure</a></li>
-            <li className={styles.tocItem}><a href="#privacy">Privacy</a></li>
+            <li className={styles.tocItem}><a href="#part1" onClick={(e) => scrollToSection(e, 'part1')}>Part 1 — Architecture</a></li>
+            <li className={styles.tocItemSub}><a href="#goals" onClick={(e) => scrollToSection(e, 'goals')}>Assessment Goals</a></li>
+            <li className={styles.tocItemSub}><a href="#philosophy" onClick={(e) => scrollToSection(e, 'philosophy')}>Design Philosophy</a></li>
+            <li className={styles.tocItemSub}><a href="#limitations" onClick={(e) => scrollToSection(e, 'limitations')}>Scientific Limitations</a></li>
+            <li className={styles.tocItemSub}><a href="#users" onClick={(e) => scrollToSection(e, 'users')}>Intended Users</a></li>
+            <li className={styles.tocItemSub}><a href="#exclusions" onClick={(e) => scrollToSection(e, 'exclusions')}>Exclusion Criteria</a></li>
+            <li className={styles.tocItem}><a href="#part2" onClick={(e) => scrollToSection(e, 'part2')}>Part 2 — Domains</a></li>
+            <li className={styles.tocItemSub}><a href="#domains" onClick={(e) => scrollToSection(e, 'domains')}>All 8 Domains</a></li>
+            <li className={styles.tocItemSub}><a href="#item-types" onClick={(e) => scrollToSection(e, 'item-types')}>Item Types</a></li>
+            <li className={styles.tocItem}><a href="#part3" onClick={(e) => scrollToSection(e, 'part3')}>Part 3 — Scoring</a></li>
+            <li className={styles.tocItemSub}><a href="#pipeline" onClick={(e) => scrollToSection(e, 'pipeline')}>Scoring Pipeline</a></li>
+            <li className={styles.tocItemSub}><a href="#bands" onClick={(e) => scrollToSection(e, 'bands')}>Score Bands</a></li>
+            <li className={styles.tocItemSub}><a href="#validity" onClick={(e) => scrollToSection(e, 'validity')}>Validity Checks</a></li>
+            <li className={styles.tocItemSub}><a href="#confidence" onClick={(e) => scrollToSection(e, 'confidence')}>Confidence Rating</a></li>
+            <li className={styles.tocItemSub}><a href="#interactions" onClick={(e) => scrollToSection(e, 'interactions')}>Interaction Rules</a></li>
+            <li className={styles.tocItemSub}><a href="#safety-gate" onClick={(e) => scrollToSection(e, 'safety-gate')}>Safety Gate</a></li>
+            <li className={styles.tocItem}><a href="#part4" onClick={(e) => scrollToSection(e, 'part4')}>Part 4 — Report Engine</a></li>
+            <li className={styles.tocItemSub}><a href="#report-principles" onClick={(e) => scrollToSection(e, 'report-principles')}>Design Principles</a></li>
+            <li className={styles.tocItemSub}><a href="#report-fragments" onClick={(e) => scrollToSection(e, 'report-fragments')}>Fragment Structure</a></li>
+            <li className={styles.tocItem}><a href="#privacy" onClick={(e) => scrollToSection(e, 'privacy')}>Privacy</a></li>
           </ol>
         </nav>
 
@@ -206,7 +214,7 @@ export default function DocumentationView() {
               <p className={styles.prose}>Concretely, the instrument aims to:</p>
               <ol style={{ paddingLeft: 'var(--space-6)', marginTop: 'var(--space-4)', lineHeight: 'var(--leading-relaxed)' }}>
                 <li style={{ marginBottom: 'var(--space-3)', fontFamily: 'var(--font-body)', fontSize: 'var(--text-base)', color: 'var(--color-ink)' }}>
-                  Give the respondent a structured, multi-domain snapshot of self-reported tendencies relevant to medical practice.
+                  Give the respondent a structured, multi-domain snapshot of self-reported tendencies relevant to EBM practice.
                 </li>
                 <li style={{ marginBottom: 'var(--space-3)', fontFamily: 'var(--font-body)', fontSize: 'var(--text-base)', color: 'var(--color-ink)' }}>
                   Translate that snapshot into plain-language, actionable feedback — strengths to leverage, growth edges to work on, and concrete next steps — rather than a bare numeric score.
