@@ -462,7 +462,7 @@ export default function FaqView() {
             <p>
               Can't find what you're looking for? Open an issue on{' '}
               <a
-                href="https://github.com/issues"
+                href="https://github.com/biowess/EB-MRA/issues"
                 target="_blank"
                 rel="noopener noreferrer"
               >
