@@ -4,14 +4,14 @@
 
 ## Evidence-Based Medical Readiness Assessment
 
-[![License](https://img.shields.io/badge/license-Source--Available%201.0-blue.svg)](./LICENSE)
-[![Status](https://img.shields.io/badge/status-methodology%20proposal%20%7C%20not%20validated-orange.svg)](#scientific-status--limitations)
-[![React](https://img.shields.io/badge/frontend-React%2019-61dafb.svg)](#tech-stack)
-[![TypeScript](https://img.shields.io/badge/language-TypeScript-3178c6.svg)](#tech-stack)
-[![Vite](https://img.shields.io/badge/build-Vite-646cff.svg)](#tech-stack)
-[![Tailwind CSS](https://img.shields.io/badge/styling-Tailwind%20CSS-38bdf8.svg)](#tech-stack)
-[![Vitest](https://img.shields.io/badge/testing-Vitest-6e9f18.svg)](#tech-stack)
-[![Oxlint](https://img.shields.io/badge/linting-Oxlint-5b8def.svg)](#tech-stack)
+[![License](https://img.shields.io/badge/license-Source--Available%201.0-F5F5DC.svg)](./LICENSE)
+[![Status](https://img.shields.io/badge/status-methodology%20proposal%20%7C%20not%20validated-F5F5DC.svg)](#scientific-status--limitations)
+[![React](https://img.shields.io/badge/frontend-React%2019-F5F5DC.svg)](#tech-stack)
+[![TypeScript](https://img.shields.io/badge/language-TypeScript-F5F5DC.svg)](#tech-stack)
+[![Vite](https://img.shields.io/badge/build-Vite-F5F5DC.svg)](#tech-stack)
+[![Tailwind CSS](https://img.shields.io/badge/styling-Tailwind%20CSS-F5F5DC.svg)](#tech-stack)
+[![Vitest](https://img.shields.io/badge/testing-Vitest-F5F5DC.svg)](#tech-stack)
+[![Oxlint](https://img.shields.io/badge/linting-Oxlint-F5F5DC.svg)](#tech-stack)
 
 </div>
 
