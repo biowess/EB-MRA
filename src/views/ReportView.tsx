@@ -372,7 +372,7 @@ export default function ReportView({ scoringResult, profileResult }: ReportViewP
 
       {/* ── Report heading ─────────────────────────────────── */}
       <header className={styles.reportHeader}>
-        <h1 className={styles.reportTitle}>Your EBM Readiness Report</h1>
+        <h1 className={styles.reportTitle}>Your Medical Readiness Report</h1>
         <p className={styles.reportSubtitle}>
           A self-reflection tool based on your responses across eight domains.
         </p>
