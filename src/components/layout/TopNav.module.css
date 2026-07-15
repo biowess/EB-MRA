@@ -16,8 +16,8 @@
   background-color: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
   /* Subtle backdrop for depth without heavy shadow */
-  backdrop-filter: blur(12px) saturate(1.2);
   -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  backdrop-filter: blur(12px) saturate(1.2);
   background-color: rgba(250, 247, 242, 0.88); /* --color-surface at 88% */
   transition: box-shadow 400ms ease,
               border-color 400ms ease;
@@ -245,15 +245,15 @@
   transition: opacity 400ms ease,
               backdrop-filter 400ms ease,
               -webkit-backdrop-filter 400ms ease;
-  backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
 }
 
 .mobileOverlayVisible {
   opacity: 1;
   pointer-events: auto;
-  backdrop-filter: blur(20px) saturate(1.4);
   -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  backdrop-filter: blur(20px) saturate(1.4);
 }
 
 /* ── Mobile drawer panel — frosted glass ────────────────────── */
@@ -266,8 +266,8 @@
   z-index: 195;
   /* Frosted glass panel */
   background-color: rgba(250, 247, 242, 0.80); /* --color-surface at 80% */
-  backdrop-filter: blur(24px) saturate(1.3);
   -webkit-backdrop-filter: blur(24px) saturate(1.3);
+  backdrop-filter: blur(24px) saturate(1.3);
   border-bottom: 1px solid rgba(217, 208, 196, 0.5); /* --color-border at 50% */
   transform: translateY(-16px);
   opacity: 0;
