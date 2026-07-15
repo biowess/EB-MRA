@@ -137,7 +137,7 @@ describe('AssessmentRunner integration', () => {
 
     // The report must contain the canonical heading.
     expect(
-      screen.getByRole('heading', { level: 1, name: /your ebm readiness report/i }),
+      screen.getByRole('heading', { level: 1, name: /your medical readiness report/i }),
     ).toBeInTheDocument()
 
     // Domain scores section must be present.
