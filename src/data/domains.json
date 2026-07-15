@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0.0",
+  "domains": [
+    {
+      "id": "SAR",
+      "name": "Scientific & Analytical Reasoning",
+      "cluster": "Cognitive",
+      "weight": 0.14,
+      "min_score": 0,
+      "max_score": 100,
+      "bands": [
+        { "label": "Emerging", "min": 0, "max": 24.999 },
+        { "label": "Developing", "min": 25, "max": 49.999 },
+        { "label": "Established", "min": 50, "max": 74.999 },
+        { "label": "Strong", "min": 75, "max": 100 }
+      ],
+      "band_boundary_rule": "low_inclusive_high_exclusive_except_top_band",
+      "psychological_construct": "Preference for and self-reported facility with systematic, evidence-weighing reasoning over snap judgment; comfort with probabilistic (vs. purely categorical) thinking.",
+      "medical_relevance": "Diagnostic reasoning, interpreting test sensitivity/specificity, evaluating a study's applicability to a specific patient.",
+      "item_ids": [
+        "SAR-C01", "SAR-C02", "SAR-C03", "SAR-C04", "SAR-C05", "SAR-C06", "SAR-C07", "SAR-C08",
+        "SAR-A01", "SAR-A02", "SAR-A03",
+        "SAR-S01", "SAR-S02"
+      ]
+    },
+    {
+      "id": "ELCA",
+      "name": "Evidence Literacy & Critical Appraisal",
+      "cluster": "Cognitive",
+      "weight": 0.14,
+      "min_score": 0,
+      "max_score": 100,
+      "bands": [
+        { "label": "Emerging", "min": 0, "max": 24.999 },
+        { "label": "Developing", "min": 25, "max": 49.999 },
+        { "label": "Established", "min": 50, "max": 74.999 },
+        { "label": "Strong", "min": 75, "max": 100 }
+      ],
+      "band_boundary_rule": "low_inclusive_high_exclusive_except_top_band",
+      "psychological_construct": "Self-assessed literacy and confidence with research-evidence concepts (study design hierarchies, statistical basics, source credibility judgment).",
+      "medical_relevance": "Reading a clinical trial, evaluating a new guideline, resisting anecdote-driven practice.",
+      "item_ids": [
+        "ELCA-C01", "ELCA-C02", "ELCA-C03", "ELCA-C04", "ELCA-C05", "ELCA-C06", "ELCA-C07", "ELCA-C08",
+        "ELCA-A01", "ELCA-A02", "ELCA-A03",
+        "ELCA-S01", "ELCA-S02"
+      ]
+    },
+    {
+      "id": "IHOR",
+      "name": "Intellectual Humility & Openness to Revision",
+      "cluster": "Cognitive",
+      "weight": 0.13,
+      "min_score": 0,
+      "max_score": 100,
+      "bands": [
+        { "label": "Emerging", "min": 0, "max": 24.999 },
+        { "label": "Developing", "min": 25, "max": 49.999 },
+        { "label": "Established", "min": 50, "max": 74.999 },
+        { "label": "Strong", "min": 75, "max": 100 }
+      ],
+      "band_boundary_rule": "low_inclusive_high_exclusive_except_top_band",
+      "psychological_construct": "Self-reported openness to revising one's view, tolerance for being shown wrong, active-open-mindedness.",
+      "medical_relevance": "Avoiding diagnostic anchoring/premature closure; accepting supervisor/peer correction; updating practice as guidelines change.",
+      "item_ids": [
+        "IHOR-C01", "IHOR-C02", "IHOR-C03", "IHOR-C04", "IHOR-C05", "IHOR-C06", "IHOR-C07", "IHOR-C08",
+        "IHOR-A01", "IHOR-A02", "IHOR-A03",
+        "IHOR-S01", "IHOR-S02"
+      ]
+    },
+    {
+      "id": "AMB",
+      "name": "Ambiguity Tolerance & Uncertainty Management",
+      "cluster": "Interpersonal/Professional",
+      "weight": 0.13,
+      "min_score": 0,
+      "max_score": 100,
+      "bands": [
+        { "label": "Emerging", "min": 0, "max": 24.999 },
+        { "label": "Developing", "min": 25, "max": 49.999 },
+        { "label": "Established", "min": 50, "max": 74.999 },
+        { "label": "Strong", "min": 75, "max": 100 }
+      ],
+      "band_boundary_rule": "low_inclusive_high_exclusive_except_top_band",
+      "psychological_construct": "Comfort with incomplete information, willingness to act (or to appropriately wait) without full certainty, low intolerance-of-uncertainty distress.",
+      "medical_relevance": "Managing undifferentiated presentations, communicating uncertain prognoses to patients, working within probabilistic guidelines.",
+      "item_ids": [
+        "AMB-C01", "AMB-C02", "AMB-C03", "AMB-C04", "AMB-C05", "AMB-C06", "AMB-C07", "AMB-C08",
+        "AMB-A01", "AMB-A02", "AMB-A03",
+        "AMB-S01", "AMB-S02"
+      ]
+    },
+    {
+      "id": "ECPC",
+      "name": "Empathic Communication & Patient-Centeredness",
+      "cluster": "Interpersonal/Professional",
+      "weight": 0.14,
+      "min_score": 0,
+      "max_score": 100,
+      "bands": [
+        { "label": "Emerging", "min": 0, "max": 24.999 },
+        { "label": "Developing", "min": 25, "max": 49.999 },
+        { "label": "Established", "min": 50, "max": 74.999 },
+        { "label": "Strong", "min": 75, "max": 100 }
+      ],
+      "band_boundary_rule": "low_inclusive_high_exclusive_except_top_band",
+      "psychological_construct": "Self-reported perspective-taking, active listening tendency, comfort communicating uncertainty/bad news, patient-centered (vs. purely disease-centered) orientation.",
+      "medical_relevance": "History-taking, shared decision-making, breaking bad news, informed consent conversations.",
+      "item_ids": [
+        "ECPC-C01", "ECPC-C02", "ECPC-C03", "ECPC-C04", "ECPC-C05", "ECPC-C06", "ECPC-C07", "ECPC-C08",
+        "ECPC-A01", "ECPC-A02", "ECPC-A03",
+        "ECPC-S01", "ECPC-S02"
+      ]
+    },
+    {
+      "id": "ERP",
+      "name": "Ethical Reasoning & Professionalism",
+      "cluster": "Interpersonal/Professional",
+      "weight": 0.13,
+      "min_score": 0,
+      "max_score": 100,
+      "bands": [
+        { "label": "Emerging", "min": 0, "max": 24.999 },
+        { "label": "Developing", "min": 25, "max": 49.999 },
+        { "label": "Established", "min": 50, "max": 74.999 },
+        { "label": "Strong", "min": 75, "max": 100 }
+      ],
+      "band_boundary_rule": "low_inclusive_high_exclusive_except_top_band",
+      "psychological_construct": "Self-reported tendencies in ethical decision rules (honesty under social pressure, disclosure of error, conflict-of-interest recognition).",
+      "medical_relevance": "Informed consent integrity, error disclosure, professional boundary maintenance.",
+      "item_ids": [
+        "ERP-C01", "ERP-C02", "ERP-C03", "ERP-C04", "ERP-C05", "ERP-C06", "ERP-C07", "ERP-C08",
+        "ERP-A01", "ERP-A02", "ERP-A03",
+        "ERP-S01", "ERP-S02"
+      ]
+    },
+    {
+      "id": "CSR",
+      "name": "Conscientiousness & Self-Regulation",
+      "cluster": "Self-Regulation",
+      "weight": 0.10,
+      "min_score": 0,
+      "max_score": 100,
+      "bands": [
+        { "label": "Emerging", "min": 0, "max": 24.999 },
+        { "label": "Developing", "min": 25, "max": 49.999 },
+        { "label": "Established", "min": 50, "max": 74.999 },
+        { "label": "Strong", "min": 75, "max": 100 }
+      ],
+      "band_boundary_rule": "low_inclusive_high_exclusive_except_top_band",
+      "psychological_construct": "Self-reported organization, follow-through, reliability, delay of gratification.",
+      "medical_relevance": "Sustaining rigorous study habits, meeting clinical documentation/follow-up obligations, managing long training timelines.",
+      "item_ids": [
+        "CSR-C01", "CSR-C02", "CSR-C03", "CSR-C04", "CSR-C05", "CSR-C06", "CSR-C07", "CSR-C08",
+        "CSR-A01", "CSR-A02", "CSR-A03",
+        "CSR-S01", "CSR-S02"
+      ]
+    },
+    {
+      "id": "RST",
+      "name": "Resilience & Stress Tolerance",
+      "cluster": "Self-Regulation",
+      "weight": 0.09,
+      "min_score": 0,
+      "max_score": 100,
+      "bands": [
+        { "label": "Emerging", "min": 0, "max": 24.999 },
+        { "label": "Developing", "min": 25, "max": 49.999 },
+        { "label": "Established", "min": 50, "max": 74.999 },
+        { "label": "Strong", "min": 75, "max": 100 }
+      ],
+      "band_boundary_rule": "low_inclusive_high_exclusive_except_top_band",
+      "psychological_construct": "Self-reported recovery from setbacks, coping-strategy repertoire, help-seeking tendency (as a positive indicator, not a deficit).",
+      "medical_relevance": "Sustaining engagement through failure (a poor grade, a difficult rotation, a missed diagnosis in training), avoiding burnout trajectory.",
+      "safety_flags": {
+        "has_safety_gate_item": true,
+        "safety_gate_item_id": "RST-S02"
+      },
+      "item_ids": [
+        "RST-C01", "RST-C02", "RST-C03", "RST-C04", "RST-C05", "RST-C06", "RST-C07", "RST-C08",
+        "RST-A01", "RST-A02", "RST-A03",
+        "RST-S01", "RST-S02"
+      ]
+    }
+  ]
+}

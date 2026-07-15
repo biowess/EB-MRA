@@ -1,0 +1,516 @@
+{
+  "tier_thresholds": {
+    "high_min": 65,
+    "moderate_min": 35,
+    "moderate_max": 64.999,
+    "low_max": 34.999
+  },
+  "profiles": [
+    {
+      "id": "PROF-01",
+      "priority_order": 1,
+      "name": "Analytical Scientist",
+      "required_tiers": [
+        {
+          "domain": "SAR",
+          "tier": "High"
+        },
+        {
+          "domain": "ELCA",
+          "tier": "High"
+        }
+      ],
+      "excluded_if": [
+        [
+          {
+            "domain": "ECPC",
+            "tier": "Low"
+          }
+        ]
+      ],
+      "description": "Approaches problems through structured, evidence-first reasoning and is comfortable with the technical vocabulary of research.",
+      "detail_fields_source": "template",
+      "special_rule": null
+    },
+    {
+      "id": "PROF-02",
+      "priority_order": 2,
+      "name": "Evidence-Oriented Thinker",
+      "required_tiers": [
+        {
+          "domain": "ELCA",
+          "tier": "High"
+        },
+        {
+          "domain": "IHOR",
+          "tier": "High"
+        }
+      ],
+      "excluded_if": [],
+      "description": "Combines strong evidence literacy with genuine openness to revising conclusions as new evidence appears — a core EBM disposition.",
+      "detail_fields_source": "template",
+      "special_rule": null
+    },
+    {
+      "id": "PROF-03",
+      "priority_order": 3,
+      "name": "Methodical Researcher",
+      "required_tiers": [
+        {
+          "domain": "CSR",
+          "tier": "High"
+        },
+        {
+          "domain": "SAR",
+          "tier": "High"
+        },
+        {
+          "domain": "ELCA",
+          "tier": "High"
+        }
+      ],
+      "excluded_if": [
+        [
+          {
+            "domain": "RST",
+            "tier": "Low"
+          }
+        ]
+      ],
+      "description": "Pairs rigorous reasoning with strong follow-through; likely to thrive in structured research or data-heavy coursework.",
+      "detail_fields_source": "template",
+      "special_rule": null
+    },
+    {
+      "id": "PROF-04",
+      "priority_order": 4,
+      "name": "Curious Skeptic",
+      "required_tiers": [
+        {
+          "domain": "SAR",
+          "tier": "High"
+        },
+        {
+          "domain": "ELCA",
+          "tier": "Low"
+        }
+      ],
+      "excluded_if": [],
+      "description": "Strong instinct to question and analyze, but evidence-specific vocabulary/skills are still developing — a very common and easily-addressed early-stage pattern.",
+      "detail_fields_source": "template",
+      "special_rule": null
+    },
+    {
+      "id": "PROF-05",
+      "priority_order": 5,
+      "name": "Structured Innovator",
+      "required_tiers": [
+        {
+          "domain": "CSR",
+          "tier": "High"
+        },
+        {
+          "domain": "SAR",
+          "tier": "High"
+        },
+        {
+          "domain": "AMB",
+          "tier": "Low"
+        }
+      ],
+      "excluded_if": [],
+      "description": "Brings organized, analytical thinking to new problems, with a preference for having a clear plan before diving in.",
+      "detail_fields_source": "template",
+      "special_rule": null
+    },
+    {
+      "id": "PROF-06",
+      "priority_order": 6,
+      "name": "Data-Driven Communicator",
+      "required_tiers": [
+        {
+          "domain": "SAR",
+          "tier": "High"
+        },
+        {
+          "domain": "ELCA",
+          "tier": "High"
+        },
+        {
+          "domain": "ECPC",
+          "tier": "High"
+        }
+      ],
+      "excluded_if": [],
+      "description": "A relatively rare, high-value combination: technically rigorous *and* able to translate that rigor for a non-technical audience.",
+      "detail_fields_source": "template",
+      "special_rule": null
+    },
+    {
+      "id": "PROF-07",
+      "priority_order": 7,
+      "name": "Independent-Minded Reasoner",
+      "required_tiers": [
+        {
+          "domain": "SAR",
+          "tier": "High"
+        },
+        {
+          "domain": "ERP",
+          "tier": "Moderate"
+        }
+      ],
+      "excluded_if": [
+        [
+          {
+            "domain": "IHOR",
+            "tier": "Low"
+          }
+        ]
+      ],
+      "description": "Reasons confidently and is comfortable reaching conclusions independently; benefits from deliberately seeking outside checks on those conclusions (see IH-01 interaction, Part 3 §4.3, if it also fires).",
+      "detail_fields_source": "template",
+      "special_rule": null
+    },
+    {
+      "id": "PROF-08",
+      "priority_order": 8,
+      "name": "Compassionate Communicator",
+      "required_tiers": [
+        {
+          "domain": "ECPC",
+          "tier": "High"
+        },
+        {
+          "domain": "ERP",
+          "tier": "High"
+        }
+      ],
+      "excluded_if": [],
+      "description": "Consistently prioritizes the human side of a situation — listening, honesty, and patient-centeredness — across both communication and ethics scenarios.",
+      "detail_fields_source": "template",
+      "special_rule": null
+    },
+    {
+      "id": "PROF-09",
+      "priority_order": 9,
+      "name": "Adaptive Clinician",
+      "required_tiers": [
+        {
+          "domain": "AMB",
+          "tier": "High"
+        },
+        {
+          "domain": "IHOR",
+          "tier": "High"
+        },
+        {
+          "domain": "ECPC",
+          "tier": "High"
+        }
+      ],
+      "excluded_if": [],
+      "description": "Comfortable with uncertainty, open to correction, and attentive to others — a combination well-matched to the ambiguity of real clinical encounters.",
+      "detail_fields_source": "template",
+      "special_rule": null
+    },
+    {
+      "id": "PROF-10",
+      "priority_order": 10,
+      "name": "Reflective Practitioner",
+      "required_tiers": [
+        {
+          "domain": "IHOR",
+          "tier": "High"
+        },
+        {
+          "domain": "ERP",
+          "tier": "High"
+        }
+      ],
+      "excluded_if": [],
+      "description": "Pairs genuine openness to being wrong with strong ethical-reasoning tendencies — likely to seek and use feedback constructively.",
+      "detail_fields_source": "template",
+      "special_rule": null
+    },
+    {
+      "id": "PROF-11",
+      "priority_order": 11,
+      "name": "Empathic Realist",
+      "required_tiers": [
+        {
+          "domain": "ECPC",
+          "tier": "High"
+        },
+        {
+          "domain": "AMB",
+          "tier": "High"
+        }
+      ],
+      "excluded_if": [],
+      "description": "Comfortable sitting with both emotional complexity and factual uncertainty at the same time, without needing to resolve either prematurely.",
+      "detail_fields_source": "template",
+      "special_rule": null
+    },
+    {
+      "id": "PROF-12",
+      "priority_order": 12,
+      "name": "Patient Advocate",
+      "required_tiers": [
+        {
+          "domain": "ECPC",
+          "tier": "High"
+        },
+        {
+          "domain": "ERP",
+          "tier": "High"
+        },
+        {
+          "domain": "AMB",
+          "tier": "High"
+        }
+      ],
+      "excluded_if": [],
+      "description": "A three-domain combination emphasizing person-centered, ethically grounded comfort with uncertainty — thematically aligned with shared decision-making.",
+      "detail_fields_source": "template",
+      "special_rule": null
+    },
+    {
+      "id": "PROF-13",
+      "priority_order": 13,
+      "name": "Principled Skeptic",
+      "required_tiers": [
+        {
+          "domain": "SAR",
+          "tier": "High"
+        },
+        {
+          "domain": "ERP",
+          "tier": "High"
+        },
+        {
+          "domain": "IHOR",
+          "tier": "High"
+        }
+      ],
+      "excluded_if": [],
+      "description": "Reasons rigorously, holds firm ethical standards, and remains open to being shown wrong — a combination that guards against both under- and over-confidence.",
+      "detail_fields_source": "template",
+      "special_rule": null
+    },
+    {
+      "id": "PROF-14",
+      "priority_order": 14,
+      "name": "Rigorous Humanist",
+      "required_tiers": [
+        {
+          "domain": "SAR",
+          "tier": "High"
+        },
+        {
+          "domain": "ECPC",
+          "tier": "High"
+        }
+      ],
+      "excluded_if": [],
+      "description": "A deliberately-named counter-profile to the EC-01 interaction pattern (Part 3 §4.3) — this profile requires *both* SAR and ECPC High simultaneously, i.e., it can only match respondents who do **not** trigger EC-01, since EC-01 requires ECPC=Low.",
+      "detail_fields_source": "template",
+      "special_rule": null
+    },
+    {
+      "id": "PROF-15",
+      "priority_order": 15,
+      "name": "Calm Communicator",
+      "required_tiers": [
+        {
+          "domain": "ECPC",
+          "tier": "High"
+        },
+        {
+          "domain": "RST",
+          "tier": "High"
+        }
+      ],
+      "excluded_if": [],
+      "description": "Stays composed and attentive to others even under stress — a combination especially relevant to difficult-conversation and bad-news scenarios.",
+      "detail_fields_source": "template",
+      "special_rule": null
+    },
+    {
+      "id": "PROF-16",
+      "priority_order": 16,
+      "name": "Resilient Learner",
+      "required_tiers": [
+        {
+          "domain": "RST",
+          "tier": "High"
+        },
+        {
+          "domain": "CSR",
+          "tier": "High"
+        }
+      ],
+      "excluded_if": [],
+      "description": "Combines strong follow-through with strong recovery from setbacks — well-positioned for the sustained demands of training.",
+      "detail_fields_source": "template",
+      "special_rule": null
+    },
+    {
+      "id": "PROF-17",
+      "priority_order": 17,
+      "name": "Steady Under Pressure",
+      "required_tiers": [
+        {
+          "domain": "RST",
+          "tier": "High"
+        },
+        {
+          "domain": "AMB",
+          "tier": "High"
+        }
+      ],
+      "excluded_if": [],
+      "description": "Tolerates both emotional strain and informational uncertainty without becoming destabilized by either.",
+      "detail_fields_source": "template",
+      "special_rule": null
+    },
+    {
+      "id": "PROF-18",
+      "priority_order": 18,
+      "name": "Growth-Minded Trainee",
+      "required_tiers": [
+        {
+          "domain": "IHOR",
+          "tier": "High"
+        },
+        {
+          "domain": "RST",
+          "tier": "High"
+        }
+      ],
+      "excluded_if": [],
+      "description": "Recovers well from setbacks *and* treats them as genuine learning opportunities rather than just something to get through.",
+      "detail_fields_source": "template",
+      "special_rule": null
+    },
+    {
+      "id": "PROF-19",
+      "priority_order": 19,
+      "name": "Steady Ethical Anchor",
+      "required_tiers": [
+        {
+          "domain": "ERP",
+          "tier": "High"
+        },
+        {
+          "domain": "RST",
+          "tier": "High"
+        },
+        {
+          "domain": "CSR",
+          "tier": "High"
+        }
+      ],
+      "excluded_if": [],
+      "description": "A three-domain combination suggesting consistency under pressure — worth noting the ERP domain's wider confidence margin (Part 1 §2.6) applies here as it does everywhere ERP contributes.",
+      "detail_fields_source": "template",
+      "special_rule": null
+    },
+    {
+      "id": "PROF-20",
+      "priority_order": 20,
+      "name": "Detail-Oriented Planner",
+      "required_tiers": [
+        {
+          "domain": "CSR",
+          "tier": "High"
+        },
+        {
+          "domain": "AMB",
+          "tier": "Low"
+        }
+      ],
+      "excluded_if": [],
+      "description": "Thrives with structure and clear plans; may find genuinely unclear situations more effortful than most, which is a workable growth edge, not a weakness.",
+      "detail_fields_source": "template",
+      "special_rule": null
+    },
+    {
+      "id": "PROF-21",
+      "priority_order": 21,
+      "name": "Balanced Generalist",
+      "required_tiers": [],
+      "excluded_if": [],
+      "description": "No domain scored clearly high or low — a genuinely common and entirely valid pattern reflecting broad, even development across all eight domains rather than a standout specialty.",
+      "detail_fields_source": "standalone_block",
+      "special_rule": "isBalancedGeneralist"
+    },
+    {
+      "id": "PROF-22",
+      "priority_order": 22,
+      "name": "Emerging Clinician-in-Training",
+      "required_tiers": [
+        {
+          "domain": "ELCA",
+          "tier": "Low"
+        },
+        {
+          "domain": "CSR",
+          "tier": "Moderate|High"
+        }
+      ],
+      "excluded_if": [
+        [
+          {
+            "domain": "SAR",
+            "tier": "Low"
+          },
+          {
+            "domain": "IHOR",
+            "tier": "Low"
+          }
+        ]
+      ],
+      "description": "Early-stage profile for respondents who show general analytical/organizational engagement but haven't yet built EBM-specific vocabulary — an expected, addressable starting point, not a readiness concern.",
+      "detail_fields_source": "template",
+      "special_rule": null
+    },
+    {
+      "id": "PROF-23",
+      "priority_order": 23,
+      "name": "High-Achieving Planner",
+      "required_tiers": [],
+      "excluded_if": [],
+      "description": "Distinct from `PROF-20`: this profile keys directly off the raw CSR score (>=90) rather than the tier system, since the perfectionism-relevant pattern is specifically about the *very* top of the range, not simply 'High.'",
+      "detail_fields_source": "template",
+      "special_rule": "csr_raw_score_gte_90"
+    },
+    {
+      "id": "PROF-24",
+      "priority_order": 24,
+      "name": "Sustainable Achiever",
+      "required_tiers": [
+        {
+          "domain": "CSR",
+          "tier": "High"
+        },
+        {
+          "domain": "RST",
+          "tier": "High"
+        },
+        {
+          "domain": "IHOR",
+          "tier": "High"
+        }
+      ],
+      "excluded_if": [],
+      "description": "The constructive counter-pattern to the CR-02 'overextension risk' flag (Part 3 §4.3) — strong follow-through paired with strong (not low) resilience and openness, suggesting sustainable rather than strained high performance.",
+      "detail_fields_source": "template",
+      "special_rule": null
+    }
+  ],
+  "fallback": {
+    "no_match_profile": "PROF-21",
+    "requires_unknown_count_zero": true
+  }
+}

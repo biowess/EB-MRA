@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "structural_rules": {
+    "reject_unknown_question_ids": true,
+    "reject_out_of_range_values": true,
+    "reject_invalid_timestamp_order": true,
+    "require_consent_confirmed": true,
+    "require_age_bracket_confirmed": true,
+    "reject_duplicate_completed_session": true
+  },
+  "random_answering": {
+    "variance_threshold": 2.5,
+    "min_items_required": 8
+  },
+  "response_time": {
+    "enabled_if_item_timestamps_present": true,
+    "total_time_floor_minutes": 8,
+    "per_item_floor_seconds": 2,
+    "per_item_floor_count_threshold": 15
+  },
+  "straight_line": {
+    "window_size": 10,
+    "applies_to": "LIKERT5_items_only_in_fixed_presentation_order"
+  },
+  "confidence_penalty_collapse_group": [
+    "straight_line",
+    "random_answering",
+    "rapid_completion",
+    "rapid_item_responses"
+  ],
+  "confidence_penalty_collapse_group_delta": -25,
+  "error_codes": {
+    "ERR_UNKNOWN_QUESTION_ID": "Submission contains a question_id not present in questions.json",
+    "ERR_INVALID_RESPONSE_VALUE": "Answer value outside the item's defined range/options",
+    "ERR_INVALID_TIMESTAMP_ORDER": "completed_at precedes started_at",
+    "ERR_CONSENT_REQUIRED": "consent_confirmed is false or missing",
+    "ERR_AGE_REQUIREMENT_NOT_MET": "age_bracket_confirmed_16_plus is false or missing",
+    "ERR_DUPLICATE_SESSION": "session_id matches a previously completed, scored session"
+  }
+}

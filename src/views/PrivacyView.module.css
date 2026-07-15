@@ -1,0 +1,164 @@
+/* ════════════════════════════════════════════════════════════
+ * PrivacyView.module.css — Privacy Policy page styles
+ * Follows "Luxurious, Calm" design language
+ * ════════════════════════════════════════════════════════════ */
+
+.page {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  padding-top: calc(var(--space-16) + 3rem);
+  padding-bottom: var(--space-20);
+}
+
+.container {
+  max-width: var(--column-reading);
+  margin-inline: auto;
+  padding-inline: var(--spacing-page-x);
+}
+
+/* ── Page header ──────────────────────────────────────────── */
+.header {
+  margin-bottom: var(--space-10);
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.eyebrow {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+  margin-bottom: var(--space-3);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-3xl));
+  font-weight: 500;
+  color: var(--color-ink);
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-4);
+}
+
+.meta {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-ink-faint);
+}
+
+/* ── Intro callout ────────────────────────────────────────── */
+.callout {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  padding: var(--space-5) var(--space-6);
+  margin-bottom: var(--space-10);
+}
+
+.callout p {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+  line-height: var(--leading-relaxed);
+}
+
+/* ── Section blocks ──────────────────────────────────────── */
+.section {
+  margin-bottom: var(--space-8);
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: var(--space-4);
+  letter-spacing: var(--tracking-tight);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.sectionBody {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-ink-muted);
+  line-height: var(--leading-relaxed);
+}
+
+.sectionBody p {
+  color: var(--color-ink-muted);
+  margin-bottom: var(--space-4);
+}
+
+.sectionBody p:last-child {
+  margin-bottom: 0;
+}
+
+.sectionBody strong {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+/* ── Data table ───────────────────────────────────────────── */
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+}
+
+.dataTable th {
+  text-align: left;
+  font-weight: 600;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.dataTable td {
+  padding: var(--space-3) var(--space-4);
+  vertical-align: top;
+  color: var(--color-ink-muted);
+  border-bottom: 1px solid var(--color-border-light);
+  line-height: var(--leading-normal);
+}
+
+.dataTable tr:last-child td {
+  border-bottom: none;
+}
+
+/* ── Contact block ────────────────────────────────────────── */
+.contactBlock {
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-5) var(--space-6);
+  margin-top: var(--space-4);
+}
+
+.contactBlock p {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-2);
+}
+
+.contactBlock p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Divider ─────────────────────────────────────────────── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--color-border-light);
+  margin-block: var(--space-8);
+}

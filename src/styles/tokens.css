@@ -1,0 +1,339 @@
+/* =============================================================
+ * EBMRA Design Tokens — "Luxurious, Calm" Visual Language
+ * All custom properties live here. Import once at root.
+ * No Tailwind utility classes referenced in this file.
+ * ============================================================= */
+
+/* ─── Typography ──────────────────────────────────────────────
+ * Fonts are declared in index.css via @font-face.
+ * We alias them here so components reference only token names.
+ * ─────────────────────────────────────────────────────────── */
+:root {
+  /* Serif families (already loaded via @font-face in index.css) */
+  --font-heading:    'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-body:       'Source Serif 4', Georgia, 'Times New Roman', serif;
+  /* Cursive / script — used exclusively for the EB-MRA logo wordmark */
+  --font-cursive:    'Dancing Script', 'Brush Script MT', cursive;
+
+  /* Scale — classical typographic modular scale (≈ 1.25×) */
+  --text-xs:   0.75rem;    /* 12px */
+  --text-sm:   0.875rem;   /* 14px */
+  --text-base: 1.0625rem;  /* 17px — comfortable reading size */
+  --text-lg:   1.25rem;    /* 20px */
+  --text-xl:   1.5625rem;  /* 25px */
+  --text-2xl:  1.9375rem;  /* 31px */
+  --text-3xl:  2.4375rem;  /* 39px */
+  --text-4xl:  3.0625rem;  /* 49px */
+
+  /* Leading — generous for long-form reading */
+  --leading-tight:   1.25;
+  --leading-snug:    1.4;
+  --leading-normal:  1.65;  /* body default */
+  --leading-relaxed: 1.8;   /* extra breathing room for prose */
+
+  /* Letter-spacing */
+  --tracking-tight:  -0.02em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.04em;
+  --tracking-widest:  0.12em; /* for small-caps / labels */
+
+  /* ─── Palette ──────────────────────────────────────────────
+   * Soft parchment background, ink-dark text,
+   * single muted amber/terracotta accent used sparingly.
+   * ──────────────────────────────────────────────────────── */
+
+  /* Backgrounds */
+  --color-bg:           #f7f3ed;   /* warm parchment */
+  --color-surface:      #faf7f2;   /* slightly lifted card / panel */
+  --color-surface-alt:  #f0ebe2;   /* inset / recessed element */
+
+  /* Text */
+  --color-ink:          #1e1b16;   /* near-black, warm tone */
+  --color-ink-muted:    #4a4238;   /* secondary text */
+  --color-ink-faint:    #8c7f6e;   /* disabled / captions */
+
+  /* Borders / dividers — use instead of drop shadows */
+  --color-border:       #d9d0c4;   /* default rule */
+  --color-border-light: #e8e2d8;   /* lighter separation */
+  --color-border-dark:  #b8a898;   /* emphasis border */
+
+  /* Accent — muted amber-terracotta, used ONLY for progress,
+   * interactive focus rings, and inline highlights.          */
+  --color-accent:       #8b6f47;   /* warm bronze */
+  --color-accent-hover: #7a5f39;   /* on hover / pressed */
+  --color-accent-subtle:#f0e6d6;   /* tinted background wash */
+  --color-accent-fg:    #fdf8f2;   /* text on accent background */
+
+  /* ─── Elevation (border-based only, no box-shadow blur) ───
+   * "No drop shadows heavier than a subtle 1px border-based elevation"
+   * ──────────────────────────────────────────────────────── */
+  --elevation-0: none;
+  --elevation-1: 0 1px 0 0 var(--color-border);           /* hairline bottom */
+  --elevation-2: 0 0 0 1px var(--color-border);           /* ring all sides */
+  --elevation-3: 0 0 0 1px var(--color-border-dark);      /* stronger ring */
+
+  /* ─── Layout ───────────────────────────────────────────────
+   * 680px reading column — the typographic ideal for prose.
+   * ──────────────────────────────────────────────────────── */
+  --column-reading:    860px;
+  --column-wide:       1060px;
+  --column-full:       1280px;
+
+  --spacing-page-x:    clamp(1rem, 4vw, 2rem);  /* horizontal page gutter */
+  --spacing-page-y:    clamp(2rem, 6vw, 4rem);        /* vertical page breathing */
+
+  /* Spacing scale (8pt grid) */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* ─── Motion ───────────────────────────────────────────────
+   * Slow, deliberate transitions (300–400ms) — nothing startling.
+   * ──────────────────────────────────────────────────────── */
+  --transition-fast:   150ms ease;
+  --transition-base:   300ms ease;
+  --transition-slow:   400ms ease;
+  --transition-color:  color var(--transition-base),
+                       background-color var(--transition-base),
+                       border-color var(--transition-base);
+  --transition-all:    all var(--transition-base);
+
+  /* ─── Border radius ────────────────────────────────────────
+   * Subtle rounding — editorial feel, not bubble-gum.
+   * ──────────────────────────────────────────────────────── */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-pill: 9999px;
+
+  /* ─── Focus ring (accent, accessible) ─────────────────────  */
+  --focus-ring: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-accent);
+}
+
+/* ─── Base resets that honour the token system ─────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%; /* respects user browser settings */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  font-weight: 400;
+  font-feature-settings: "kern" 1, "liga" 1, "onum" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Smooth theme transitions when safety-theme toggles */
+  transition: background-color 800ms ease,
+              color 800ms ease;
+}
+
+/* ─── Safety Theme — pastel-blue override ──────────────────────
+ * Applied via `document.body.classList.add('safety-theme')` when
+ * the safety gate triggers. Overrides warm-parchment tokens with
+ * calming blue equivalents so ALL components adapt automatically.
+ * ─────────────────────────────────────────────────────────────── */
+body.safety-theme {
+  --color-bg:           #e8f0f8;   /* pastel blue background */
+  --color-surface:      #eef4fb;   /* lifted card on blue */
+  --color-surface-alt:  #dde8f3;   /* inset / recessed on blue */
+  --color-ink:          #1a2a3a;   /* deep navy text */
+  --color-ink-muted:    #3a5068;   /* secondary text on blue */
+  --color-ink-faint:    #6b8299;   /* captions on blue */
+  --color-border:       #bdd0e4;   /* default rule on blue */
+  --color-border-light: #d4e2f0;   /* lighter separation */
+  --color-border-dark:  #9bb8d4;   /* emphasis border */
+  --color-accent:       #4a7faa;   /* blue-steel accent */
+  --color-accent-hover: #3a6d96;   /* on hover / pressed */
+  --color-accent-subtle:#dae8f4;   /* tinted background wash */
+  --color-accent-fg:    #fdfefe;   /* text on accent background */
+  --focus-ring: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-accent);
+}
+
+/* Headings — Newsreader serif */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+/* Prose rhythm */
+p {
+  font-family: var(--font-body);
+  line-height: var(--leading-normal);
+  color: var(--color-ink);
+}
+
+p + p {
+  margin-top: var(--space-4);
+}
+
+/* Links — accent colour, no underline by default */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: var(--transition-color);
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: var(--radius-sm);
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin-block: var(--space-8);
+}
+
+/* ─── Component-level semantic classes ────────────────────── */
+
+/* Reading column — max 680px, centered, with generous gutter */
+.reading-column {
+  width: 100%;
+  max-width: var(--column-reading);
+  margin-inline: auto;
+  padding-inline: var(--spacing-page-x);
+}
+
+/* Wide column — max 880px for non-prose content */
+.wide-column {
+  width: 100%;
+  max-width: var(--column-wide);
+  margin-inline: auto;
+  padding-inline: var(--spacing-page-x);
+}
+
+/* Full column — max 1120px for layout scaffolding */
+.full-column {
+  width: 100%;
+  max-width: var(--column-full);
+  margin-inline: auto;
+  padding-inline: var(--spacing-page-x);
+}
+
+/* Muted label / eyebrow text */
+.label-text {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+}
+
+/* Caption / footnote */
+.caption-text {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+  color: var(--color-ink-muted);
+  font-style: italic;
+}
+
+/* Prominent display heading */
+.display-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl));
+  font-weight: 400;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+/* Section heading */
+.section-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(var(--text-xl), 3vw, var(--text-2xl));
+  font-weight: 500;
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+}
+
+/* ─── Progress / accent use — the ONLY place accent shows ─── */
+
+.progress-track {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-border-light);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--color-accent);
+  border-radius: var(--radius-pill);
+  transition: width var(--transition-slow);
+}
+
+/* Step indicator dot */
+.step-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-border);
+  transition: background-color var(--transition-base);
+}
+
+.step-dot[data-active="true"] {
+  background-color: var(--color-accent);
+}
+
+/* ─── Surface / card — border-based elevation only ────────── */
+
+.surface {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.surface-inset {
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+}
+
+/* ─── Reduced motion ─────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

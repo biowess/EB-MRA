@@ -1,0 +1,195 @@
+/*
+ * HomeView.module.css
+ * Hero page styles — tokens only, no Tailwind.
+ */
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-20) var(--spacing-page-x);
+  min-height: calc(100dvh - 64px - 120px); /* subtract nav + footer */
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+  margin-bottom: var(--space-4);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(var(--text-2xl), 6vw, var(--text-4xl));
+  font-weight: 400;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  color: var(--color-ink);
+  margin-bottom: var(--space-6);
+  max-width: 26ch;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-ink-muted);
+  max-width: 55ch;
+  margin-bottom: var(--space-6);
+}
+
+.disclaimer {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  line-height: var(--leading-normal);
+  color: var(--color-ink-faint);
+  max-width: 60ch;
+  margin-bottom: var(--space-10);
+}
+
+/* ── CTA button — accent bronze, matches design language ──────
+ * The global `a` rule in tokens.css would fight this via its own
+ * hover colour + underline. We defeat it with !important on the
+ * properties that global rule sets, and keep the rest scoped. */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-body) !important;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  /* Accent bronze — the only interactive colour in this design system */
+  color: var(--color-accent-fg) !important;
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-10);
+  cursor: pointer;
+  text-decoration: none !important;
+  position: relative;
+  overflow: hidden;
+  /* Transitions: lift + shadow + colour + letter-spacing */
+  transition:
+    transform      300ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow     300ms ease,
+    background-color 300ms ease,
+    border-color   300ms ease,
+    letter-spacing 300ms ease,
+    gap            300ms ease;
+  /* Subtle warmth shadow matching the accent hue */
+  box-shadow: 0 2px 0 0 var(--color-accent-hover),
+              0 4px 16px 0 rgba(139, 111, 71, 0.20);
+  /* 44px tall minimum for touch target compliance */
+  min-height: 44px;
+}
+
+/* Shimmer underlay — slides across on hover */
+.cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.10) 50%,
+    transparent 65%
+  );
+  transform: translateX(-100%);
+  transition: transform 500ms ease;
+  pointer-events: none;
+}
+
+.cta:hover {
+  background-color: var(--color-accent-hover) !important;
+  border-color: var(--color-accent-hover) !important;
+  color: var(--color-accent-fg) !important;
+  text-decoration: none !important;
+  transform: translateY(-3px);
+  letter-spacing: calc(var(--tracking-wide) + 0.01em);
+  gap: var(--space-4);
+  box-shadow: 0 3px 0 0 #5e4525,
+              0 8px 24px 0 rgba(139, 111, 71, 0.30);
+}
+
+.cta:hover::before {
+  transform: translateX(100%);
+}
+
+.cta:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 0 var(--color-accent-hover),
+              0 2px 8px 0 rgba(139, 111, 71, 0.15);
+  transition-duration: 80ms;
+}
+
+.cta:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-accent);
+}
+
+/* Arrow icon inside the CTA */
+.ctaArrow {
+  display: inline-flex;
+  align-items: center;
+  transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  flex-shrink: 0;
+}
+
+.cta:hover .ctaArrow {
+  transform: translateX(3px);
+}
+
+/* ── Divider ─────────────────────────────────────────────────── */
+
+.divider {
+  width: 48px;
+  height: 1px;
+  background-color: var(--color-border);
+  margin: var(--space-12) auto;
+}
+
+/* ── Feature grid ────────────────────────────────────────────── */
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-6);
+  width: 100%;
+  max-width: var(--column-reading);
+  text-align: left;
+}
+
+.featureCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  transition: border-color var(--transition-base),
+              background-color var(--transition-base);
+}
+
+.featureCard:hover {
+  border-color: var(--color-border-dark);
+  background-color: var(--color-surface-alt);
+}
+
+.featureTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-ink);
+  margin-bottom: var(--space-2);
+}
+
+.featureDesc {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-ink-muted);
+}

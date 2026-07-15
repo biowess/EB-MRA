@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { margin: 0; font-family: sans-serif; }
+  .anim { transform: translateY(0); will-change: transform; }
+  .shell { display: flex; flex-direction: column; min-height: 100vh; }
+  .main { flex: 1; height: 1500px; background: linear-gradient(to bottom, #f0f0f0, #ccc); }
+  .nav { position: sticky; bottom: 0; background: #333; color: white; padding: 20px; text-align: center; }
+  .footer { height: 300px; background: #111; color: #888; padding: 20px; }
+</style>
+</head>
+<body>
+<div class="anim">
+  <div class="shell">
+    <div class="main">
+      <h1>Scroll down (with transform parent)</h1>
+      <p>This is a tall main content area.</p>
+    </div>
+    <div class="nav">
+      I am sticky at the bottom!
+    </div>
+    <div class="footer">
+      I am the footer.
+    </div>
+  </div>
+</div>
+</body>
+</html>

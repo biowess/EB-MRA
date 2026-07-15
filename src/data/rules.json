@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0.0",
+  "interaction_rules": [
+    {
+      "id": "AR-03",
+      "conditions": [
+        { "domain": "SAR", "op": ">=", "value": 70 },
+        { "domain": "AMB", "op": "<=", "value": 40 }
+      ],
+      "effect": "report_flag",
+      "report_block": "RPT-AR03"
+    },
+    {
+      "id": "AR-03b",
+      "conditions": [
+        { "domain": "AMB", "op": "<=", "value": 40 },
+        { "domain": "CSR", "op": ">=", "value": 70 }
+      ],
+      "effect": "report_flag",
+      "report_block": "RPT-AR03B"
+    },
+    {
+      "id": "IH-01",
+      "conditions": [
+        { "domain": "SAR", "op": ">=", "value": 70 },
+        { "domain": "IHOR", "op": "<=", "value": 40 }
+      ],
+      "effect": "report_flag",
+      "report_block": "RPT-IH01"
+    },
+    {
+      "id": "CR-02",
+      "conditions": [
+        { "domain": "CSR", "op": ">=", "value": 80 },
+        { "domain": "RST", "op": "<=", "value": 40 }
+      ],
+      "effect": "report_flag",
+      "report_block": "RPT-CR02"
+    },
+    {
+      "id": "EC-01",
+      "conditions": [
+        { "domain": "SAR", "op": ">=", "value": 70 },
+        { "domain": "ECPC", "op": "<=", "value": 40 }
+      ],
+      "effect": "report_flag",
+      "report_block": "RPT-EC01"
+    },
+    {
+      "id": "CM-04",
+      "conditions": [
+        { "domain": "RST", "op": "<=", "value": 40 },
+        { "domain": "ERP", "op": ">=", "value": 80 }
+      ],
+      "effect": "confidence_modifier",
+      "target": "ERP",
+      "delta": -15
+    },
+    {
+      "id": "PC-01",
+      "conditions": [
+        { "domain": "CSR", "op": ">=", "value": 90 }
+      ],
+      "effect": "report_flag",
+      "report_block": "RPT-PC01"
+    },
+    {
+      "id": "OA-01",
+      "conditions": [
+        { "domain": "SAR", "op": ">=", "value": 90 }
+      ],
+      "effect": "report_flag",
+      "report_block": "RPT-OA01"
+    }
+  ],
+  "evaluation_order": [
+    "AR-03",
+    "AR-03b",
+    "IH-01",
+    "CR-02",
+    "EC-01",
+    "CM-04",
+    "PC-01",
+    "OA-01"
+  ],
+  "confidence_modifiers_global": [
+    {
+      "id": "CM-01",
+      "condition": "sd_index >= 3",
+      "delta": -20
+    },
+    {
+      "id": "CM-02",
+      "condition": "missing_data_rate > 0.10",
+      "delta": -10
+    },
+    {
+      "id": "CM-03",
+      "condition": "straight_line_flags.length > 0",
+      "delta": -25
+    },
+    {
+      "id": "CM-consistency",
+      "condition": "min(consistency_flags.length, 4)",
+      "delta_per_unit": -5
+    }
+  ],
+  "consistency_pairs": [
+    ["SAR-C01", "SAR-C05"],
+    ["SAR-A01", "SAR-A02"],
+    ["IHOR-C01", "IHOR-C05"],
+    ["IHOR-A01", "IHOR-A02"],
+    ["ECPC-A01", "ECPC-A02"],
+    ["CSR-A01", "CSR-A02"],
+    ["AMB-A01", "AMB-A02"],
+    ["ELCA-A01", "ELCA-A02"],
+    ["ERP-A01", "ERP-A02"],
+    ["RST-A01", "RST-A02"]
+  ],
+  "safety_gate": {
+    "trigger_item": "RST-S02",
+    "trigger_value": 3,
+    "supporting_items": ["RST-C03", "RST-C05", "RST-C08"],
+    "supporting_threshold_contribution_score": 2,
+    "supporting_min_count": 2
+  }
+}

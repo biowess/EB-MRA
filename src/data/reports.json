@@ -1,0 +1,440 @@
+{
+  "domain_fragments": {
+    "SAR": {
+      "Emerging": {
+        "id": "RPT-SAR-E",
+        "interpretation": "You reported leaning more on quick, intuitive judgments than on step-by-step analysis in most situations.",
+        "strength": "Quick judgment is a real asset in fast-moving situations and shouldn't be discounted — the goal is adding tools, not replacing this one.",
+        "growth": "Practicing a deliberate \"pause and check\" habit before finalizing judgments on unfamiliar or high-stakes questions.",
+        "study_advice": "Practice working through case-based or problem-set questions out loud, explicitly naming each reasoning step.",
+        "wellbeing_advice": "There's no wellbeing cost to intuitive thinking itself — this note is purely about adding a tool, not correcting a flaw.",
+        "medical_practice_relevance": "Analytical reasoning underlies diagnostic reasoning and evidence interpretation — an area worth deliberately developing before/during training.",
+        "warning": "None.",
+        "resources": ["Intro-level critical thinking or logic coursework; case-based study groups."]
+      },
+      "Developing": {
+        "id": "RPT-SAR-D",
+        "interpretation": "You reported a mixed pattern — sometimes reasoning things through carefully, sometimes going with your gut.",
+        "strength": "You already shift into a more analytical gear at least some of the time, which is a solid foundation to build on.",
+        "growth": "Noticing which situations pull you toward gut response and deliberately slowing down in those specific ones.",
+        "study_advice": "Use structured frameworks (e.g., explicit pro/con lists, decision trees) for a few weeks to build the habit before it becomes automatic.",
+        "wellbeing_advice": "Building new habits takes repetition; expect inconsistency at first without treating it as failure.",
+        "medical_practice_relevance": "Coursework in research methods or biostatistics tends to accelerate this kind of reasoning quickly once engaged with directly.",
+        "warning": "None.",
+        "resources": ["Decision-frameworks primers; structured problem-set practice."]
+      },
+      "Established": {
+        "id": "RPT-SAR-S",
+        "interpretation": "You reported consistently reaching for structured, evidence-weighing reasoning when things get complex.",
+        "strength": "This is a well-established habit of mind that will serve you well in coursework built around evidence appraisal.",
+        "growth": "Extending the same rigor to areas outside familiar academic contexts — personal decisions, ambiguous real-world situations.",
+        "study_advice": "Seek out coursework or clubs involving structured problem-solving (journal clubs, case competitions) to keep building.",
+        "wellbeing_advice": "Established habits like this one are usually stable — no specific wellbeing note needed here.",
+        "medical_practice_relevance": "This pattern aligns well with how clinical reasoning is taught and assessed in most medical curricula.",
+        "warning": "None.",
+        "resources": ["Journal clubs; research-methods electives."]
+      },
+      "Strong": {
+        "id": "RPT-SAR-T",
+        "interpretation": "You reported a strong, consistent preference for deliberate, evidence-based reasoning across nearly every scenario.",
+        "strength": "This is one of the clearest strengths in your profile — deliberate reasoning under complexity is exactly what EBM training rewards.",
+        "growth": "Watching for the shadow side of this strength: knowing when \"good enough\" analysis is appropriate rather than open-ended deliberation (see Warning Message).",
+        "study_advice": "Pair this strength with domains like Empathic Communication so technical rigor doesn't crowd out other study priorities.",
+        "wellbeing_advice": "Watch for decision fatigue or procrastination-via-overanalysis on low-stakes choices; not every decision needs full deliberation.",
+        "medical_practice_relevance": "This pattern aligns strongly with structured clinical reasoning; the main watch-item is balancing speed with thoroughness under real time pressure.",
+        "warning": "Possible over-analysis tendency — very high scores here can occasionally correlate with decision paralysis on low-stakes matters; not a concern unless it's already causing real friction for you.",
+        "resources": ["Time-boxed decision-making practice (setting a deliberate cutoff for lower-stakes analysis)."]
+      }
+    },
+    "ELCA": {
+      "Emerging": {
+        "id": "RPT-ELCA-E",
+        "interpretation": "You reported that research-evidence concepts (study design, statistics, source appraisal) feel unfamiliar or intimidating right now.",
+        "strength": "Recognizing unfamiliarity honestly is itself a useful starting point — this is one of the most learnable domains in the whole assessment.",
+        "growth": "Building basic vocabulary (study types, what \"control group\" means) before tackling appraisal itself.",
+        "study_advice": "Start with a short, structured intro to research methods before attempting to appraise real studies.",
+        "wellbeing_advice": "This is a knowledge gap, not a personal shortfall — expect this to close relatively quickly with direct study.",
+        "medical_practice_relevance": "This is foundational to EBM practice and is explicitly taught in most medical curricula — an excellent area to front-load before matriculating.",
+        "warning": "None.",
+        "resources": ["Introductory research-methods or \"how to read a study\" primers."]
+      },
+      "Developing": {
+        "id": "RPT-ELCA-D",
+        "interpretation": "You reported some familiarity with evidence-appraisal concepts, but confidence varies by topic.",
+        "strength": "You have a real foundation already; the gaps are specific and addressable rather than general.",
+        "growth": "Identifying which specific sub-skills (statistics vs. study design vs. source-judgment) feel weakest and targeting those.",
+        "study_advice": "Alternate between concept review and applied practice (reading real abstracts) rather than only one or the other.",
+        "wellbeing_advice": "Confidence unevenness across sub-topics is completely normal at this stage.",
+        "medical_practice_relevance": "Building this now will reduce the learning curve during evidence-based-medicine coursework.",
+        "warning": "None.",
+        "resources": ["Guided appraisal worksheets; structured abstract-reading practice."]
+      },
+      "Established": {
+        "id": "RPT-ELCA-S",
+        "interpretation": "You reported general comfort with core evidence-appraisal ideas.",
+        "strength": "This comfort will make research-heavy coursework meaningfully easier to engage with.",
+        "growth": "Practicing appraisal on real, current literature rather than textbook examples.",
+        "study_advice": "Set a habit of reading one primary-source abstract a week and appraising it.",
+        "wellbeing_advice": "No specific wellbeing note needed here.",
+        "medical_practice_relevance": "This supports reading clinical trials, evaluating new guidelines, and resisting anecdote-driven practice.",
+        "warning": "None.",
+        "resources": ["Journal club participation; primary-literature reading habit."]
+      },
+      "Strong": {
+        "id": "RPT-ELCA-T",
+        "interpretation": "You reported high confidence across study-design and statistical-literacy concepts.",
+        "strength": "This is a strong, EBM-specific asset that directly supports reading and applying primary literature.",
+        "growth": "Practicing explaining these concepts to others — teaching is a strong test of true fluency.",
+        "study_advice": "Seek out a journal club or research-methods elective that pushes past introductory material.",
+        "wellbeing_advice": "No specific wellbeing note needed here.",
+        "medical_practice_relevance": "This is close to the core definition of EBM competence itself and is a genuine head start.",
+        "warning": "None — confidence here should still be paired with ELCA-A02-style humility about source-credibility judgment, which stays useful at any skill level.",
+        "resources": ["Advanced research-methods or biostatistics coursework; mentoring others in appraisal."]
+      }
+    },
+    "IHOR": {
+      "Emerging": {
+        "id": "RPT-IHOR-E",
+        "interpretation": "You reported that being shown wrong, or revising a firmly-held view, tends to feel uncomfortable or doesn't happen often.",
+        "strength": "Strong convictions and follow-through often travel together with this pattern — the goal is adding flexibility, not losing conviction.",
+        "growth": "Practicing low-stakes \"changing my mind\" moments deliberately, to build comfort before it matters more.",
+        "study_advice": "Study in groups where being wrong is normalized and low-stakes, to build tolerance gradually.",
+        "wellbeing_advice": "Discomfort with being wrong is extremely common and not a character flaw — this is a skill, not a fixed trait.",
+        "medical_practice_relevance": "This is directly protective against diagnostic anchoring and premature closure — genuinely worth deliberate practice before clinical training.",
+        "warning": "None.",
+        "resources": ["Low-stakes group study or debate settings; peer feedback practice."]
+      },
+      "Developing": {
+        "id": "RPT-IHOR-D",
+        "interpretation": "You reported a mixed pattern — open to revision in some situations, more resistant in others.",
+        "strength": "You already show real openness some of the time, which is a workable foundation.",
+        "growth": "Noticing which situations trigger more defensiveness (status-related ones are common) and working with those specifically.",
+        "study_advice": "Seek out feedback actively rather than only reactively — ask \"what am I missing?\" before someone tells you.",
+        "wellbeing_advice": "This kind of unevenness is expected and improves naturally with low-stakes practice.",
+        "medical_practice_relevance": "Building this now will ease the hierarchical feedback dynamics common in clinical training (attending/trainee correction).",
+        "warning": "None.",
+        "resources": ["Structured feedback-seeking habits (asking specific \"what am I missing\" questions)."]
+      },
+      "Established": {
+        "id": "RPT-IHOR-S",
+        "interpretation": "You reported general comfort with being corrected and updating your views.",
+        "strength": "This is a genuinely protective habit against a well-documented category of clinical reasoning errors (premature closure).",
+        "growth": "Practicing this under higher-stakes or more public conditions, not just private, low-pressure ones.",
+        "study_advice": "Take on a role (tutoring, peer review) where correcting others regularly puts you on both sides of the exchange.",
+        "wellbeing_advice": "No specific wellbeing note needed here.",
+        "medical_practice_relevance": "This supports accepting supervisor feedback constructively and updating practice as guidelines evolve.",
+        "warning": "None.",
+        "resources": ["Peer tutoring or review roles."]
+      },
+      "Strong": {
+        "id": "RPT-IHOR-T",
+        "interpretation": "You reported strong, consistent comfort with correction and revision, even under social pressure.",
+        "strength": "This is one of the more distinctive strengths a future clinician can have — genuinely rare and valuable.",
+        "growth": "Watching that openness doesn't tip into under-confidence or excessive hedging in situations that call for a clear stance.",
+        "study_advice": "Mentor others in normalizing being wrong — this models the behavior for peers who find it harder.",
+        "wellbeing_advice": "No specific wellbeing note needed here.",
+        "medical_practice_relevance": "This is protective against diagnostic overconfidence, a well-recognized risk pattern discussed in medical-error literature.",
+        "warning": "If paired with very high analytical confidence (see interaction rule IH-01 in §6.2), watch for the opposite pattern — confident reasoning that resists correction — which this report will flag separately if it applies to you.",
+        "resources": ["Mentoring roles; reflective practice journaling."]
+      }
+    },
+    "AMB": {
+      "Emerging": {
+        "id": "RPT-AMB-E",
+        "interpretation": "You reported that unclear or incomplete-information situations tend to feel uncomfortable or hard to act within.",
+        "strength": "Wanting more certainty before acting often reflects real thoroughness — the goal is adding flexibility for situations where waiting isn't possible.",
+        "growth": "Practicing making small, low-stakes decisions with intentionally incomplete information to build tolerance gradually.",
+        "study_advice": "Practice case-based exercises specifically designed with incomplete information, building comfort through repetition.",
+        "wellbeing_advice": "Discomfort with uncertainty is extremely common and often connects to a reasonable desire to avoid mistakes — not a flaw.",
+        "medical_practice_relevance": "Clinical practice is inherently uncertain — this is a genuinely learnable area worth deliberate attention before intensive clinical exposure.",
+        "warning": "None.",
+        "resources": ["Graded exposure exercises (low-stakes decisions with limited information)."]
+      },
+      "Developing": {
+        "id": "RPT-AMB-D",
+        "interpretation": "You reported a mixed pattern — comfortable with some ambiguity, less so under time pressure or high stakes.",
+        "strength": "You already handle some ambiguous situations well, which is a workable starting point.",
+        "growth": "Identifying which specific triggers (time pressure vs. high stakes vs. social visibility) increase your discomfort most.",
+        "study_advice": "Use timed decision exercises to practice acting under a deadline without full information.",
+        "wellbeing_advice": "This unevenness is expected and typically improves with graded, low-stakes practice.",
+        "medical_practice_relevance": "Recognizing your specific triggers now will help target coursework or shadowing experiences that build tolerance safely.",
+        "warning": "None.",
+        "resources": ["Timed case-based practice; identifying personal ambiguity triggers."]
+      },
+      "Established": {
+        "id": "RPT-AMB-S",
+        "interpretation": "You reported general comfort acting on incomplete information when needed.",
+        "strength": "This is a genuinely useful trait for clinical environments, which are irreducibly uncertain.",
+        "growth": "Practicing communicating uncertainty to others clearly, not just tolerating it internally.",
+        "study_advice": "Take opportunities (presentations, discussions) to practice communicating a probabilistic answer clearly.",
+        "wellbeing_advice": "No specific wellbeing note needed here.",
+        "medical_practice_relevance": "Supports managing undifferentiated presentations and probabilistic guideline-based practice.",
+        "warning": "None — if paired with high Conscientiousness, this report separately flags a specific \"checks and re-checks\" pattern (see §6.2, AR-03b) — worth reading if it applies to you.",
+        "resources": ["Presentation or discussion practice involving probabilistic communication."]
+      },
+      "Strong": {
+        "id": "RPT-AMB-T",
+        "interpretation": "You reported strong, consistent comfort operating under uncertainty, even in high-stakes situations.",
+        "strength": "This is a strong asset for clinical environments and for communicating honestly with patients about uncertain outcomes.",
+        "growth": "Making sure comfort with ambiguity doesn't tip into insufficient information-gathering when more certainty actually is available and worth pursuing.",
+        "study_advice": "Practice the discipline of still checking available information even when comfortable proceeding without it.",
+        "wellbeing_advice": "No specific wellbeing note needed here.",
+        "medical_practice_relevance": "Directly supports communicating uncertain prognoses honestly and managing differential diagnoses without premature certainty-seeking.",
+        "warning": "If paired with very high analytical scores, this report separately flags a \"needs certainty before acting\" pattern (see §6.2, AR-03) — worth reading if it applies to you.",
+        "resources": ["Reflective practice on when \"enough is enough\" information-gathering applies."]
+      }
+    },
+    "ECPC": {
+      "Emerging": {
+        "id": "RPT-ECPC-E",
+        "interpretation": "You reported that perspective-taking and attentive listening aren't yet a strong default pattern for you.",
+        "strength": "A more fact-focused communication style is a real asset in technical contexts — the goal is adding range, not replacing this style.",
+        "growth": "Practicing active-listening habits deliberately (reflecting back what you heard before responding).",
+        "study_advice": "Practice paraphrasing back what a speaker said before responding, in everyday conversations, as a deliberate drill.",
+        "wellbeing_advice": "A more fact-focused style is not a deficit — this is a skill-building note, not a correction of a flaw.",
+        "medical_practice_relevance": "Communication quality is a distinct, trainable competency in medical curricula — a genuinely learnable area worth early attention.",
+        "warning": "None.",
+        "resources": ["Active-listening drills; paraphrasing practice."]
+      },
+      "Developing": {
+        "id": "RPT-ECPC-D",
+        "interpretation": "You reported a mixed pattern — attentive in some interactions, more fact-focused or distracted in others.",
+        "strength": "You already show real strength in some interactions, which is a workable foundation to build from.",
+        "growth": "Noticing which situations pull you toward a more fact-focused mode and practicing perspective-taking there specifically.",
+        "study_advice": "Seek feedback specifically on listening (not just content) from people who know you well.",
+        "wellbeing_advice": "This unevenness is common and improves with deliberate, low-stakes practice.",
+        "medical_practice_relevance": "Building this now will ease history-taking and shared decision-making conversations during clinical training.",
+        "warning": "None.",
+        "resources": ["Feedback-seeking from trusted peers on listening specifically."]
+      },
+      "Established": {
+        "id": "RPT-ECPC-S",
+        "interpretation": "You reported generally strong perspective-taking and listening habits.",
+        "strength": "This is a well-established interpersonal strength directly relevant to clinical communication.",
+        "growth": "Practicing this under harder conditions — delivering difficult news, not just everyday conversation.",
+        "study_advice": "Practice communication in higher-stakes simulated contexts (mock patient interviews, role-play).",
+        "wellbeing_advice": "No specific wellbeing note needed here.",
+        "medical_practice_relevance": "Supports history-taking, shared decision-making, and delivering difficult news effectively.",
+        "warning": "None.",
+        "resources": ["Mock patient interview or role-play practice."]
+      },
+      "Strong": {
+        "id": "RPT-ECPC-T",
+        "interpretation": "You reported consistently strong, patient-centered communication tendencies across situations.",
+        "strength": "This is one of the clearest strengths in your profile — genuinely valuable for patient trust and shared decision-making.",
+        "growth": "Making sure strong communication doesn't come at the expense of directness when clarity is what's actually needed.",
+        "study_advice": "Take on roles (tutoring, mentoring, patient-facing volunteer work) that stretch this strength further.",
+        "wellbeing_advice": "No specific wellbeing note needed here.",
+        "medical_practice_relevance": "Directly supports breaking bad news, informed consent conversations, and building patient trust.",
+        "warning": "None — if paired with very high analytical scores, this report separately flags a \"technical orientation\" growth note (see §6.2, EC-01) worth reading if it applies to you.",
+        "resources": ["Patient-facing volunteer or mentoring roles."]
+      }
+    },
+    "ERP": {
+      "Emerging": {
+        "id": "RPT-ERP-E",
+        "interpretation": "You reported some tolerance for minor shortcuts or hesitancy around disclosure in the scenarios presented.",
+        "strength": "Many of these scenarios involve genuine gray areas (see ERP-S02's design note in Part 2) — this isn't a clear-cut finding.",
+        "growth": "Reflecting on specific scenarios where the \"harder\" answer wasn't chosen, and why, in a low-stakes setting (e.g., with a mentor).",
+        "study_advice": "Case-based ethics discussion (with peers or a mentor) tends to be more useful here than solo reflection.",
+        "wellbeing_advice": "This domain measures scenario responses, not character — no wellbeing note needed beyond that reframe.",
+        "medical_practice_relevance": "Ethics and professionalism are explicitly taught, developmental (not fixed) competencies in medical curricula — this is a normal starting point, not a red flag.",
+        "warning": "Interpret this domain's score with extra caution — see the confidence note attached to this section.",
+        "resources": ["Case-based ethics discussion groups; mentor conversations."]
+      },
+      "Developing": {
+        "id": "RPT-ERP-D",
+        "interpretation": "You reported a mixed pattern across the ethical-reasoning scenarios in this section.",
+        "strength": "You show real strength in some scenarios, which is a reasonable foundation.",
+        "growth": "Identifying which specific scenario types (disclosure vs. confidentiality vs. loyalty conflicts) felt harder.",
+        "study_advice": "Continue engaging with case-based ethics scenarios, particularly ones involving the specific tension points identified above.",
+        "wellbeing_advice": "No specific wellbeing note needed here.",
+        "medical_practice_relevance": "This supports informed consent integrity and conflict-of-interest recognition, both explicitly taught and assessed in training.",
+        "warning": "Interpret this domain's score with extra caution — see the confidence note attached to this section.",
+        "resources": ["Professionalism coursework; case-based discussion."]
+      },
+      "Established": {
+        "id": "RPT-ERP-S",
+        "interpretation": "You reported generally strong, consistent ethical-reasoning tendencies across scenarios.",
+        "strength": "This is a well-established strength directly relevant to professional conduct expectations.",
+        "growth": "Practicing these judgments in slightly higher-stakes, real contexts to build confidence they'll hold under pressure.",
+        "study_advice": "Seek out professionalism coursework or discussions that involve real (not hypothetical) case review.",
+        "wellbeing_advice": "No specific wellbeing note needed here.",
+        "medical_practice_relevance": "Supports error disclosure and professional boundary maintenance, both examined components of clinical training.",
+        "warning": "Interpret this domain's score with some caution — see the confidence note attached to this section.",
+        "resources": ["Real (not hypothetical) case review, where appropriate and available."]
+      },
+      "Strong": {
+        "id": "RPT-ERP-T",
+        "interpretation": "You reported very strong, consistent ethical-reasoning tendencies across nearly every scenario.",
+        "strength": "This is a strong, consistent asset — professional codes of conduct are core, examined parts of medical training, and this suggests a head start.",
+        "growth": "Reflecting honestly on whether real behavior matches stated intentions — ethics vignette research generally finds a gap between hypothetical endorsement and real follow-through, which is worth naming here.",
+        "study_advice": "Consider a mentoring or teaching role in ethics case discussion — explaining your reasoning to others is a strong test of its consistency.",
+        "wellbeing_advice": "No specific wellbeing note needed here.",
+        "medical_practice_relevance": "This aligns well with core professional-identity-formation goals in medical education.",
+        "warning": "Interpret this domain's score with some caution, especially if this report also flags reduced resilience elsewhere (see confidence modifier CM-04 in Part 3) — very high self-reported ethics scores paired with low resilience scores can sometimes reflect idealized self-presentation rather than a true difference.",
+        "resources": ["Mentoring or teaching roles in ethics case discussion."]
+      }
+    },
+    "CSR": {
+      "Emerging": {
+        "id": "RPT-CSR-E",
+        "interpretation": "You reported that organization and follow-through aren't yet a strong default pattern for you.",
+        "strength": "Flexibility and adaptability often travel with this pattern — the goal is adding structure as a tool, not replacing your style entirely.",
+        "growth": "Building one simple external system (a single calendar or list) before attempting a complex one.",
+        "study_advice": "Start with one lightweight tracking tool (a single list or calendar) rather than an elaborate system.",
+        "wellbeing_advice": "Inconsistent follow-through is extremely common and workable with simple systems, not a character flaw.",
+        "medical_practice_relevance": "Organizational habits are learnable and directly relevant to clinical documentation and follow-up obligations.",
+        "warning": "None.",
+        "resources": ["A single lightweight planning tool (calendar or list app)."]
+      },
+      "Developing": {
+        "id": "RPT-CSR-D",
+        "interpretation": "You reported a mixed pattern — reliable in some contexts, less so under competing demands.",
+        "strength": "You already show real reliability in some contexts, a workable foundation.",
+        "growth": "Identifying which specific contexts (competing deadlines, low-interest tasks) most challenge follow-through.",
+        "study_advice": "Practice triage skills — deciding what matters most when everything feels urgent.",
+        "wellbeing_advice": "This unevenness is expected and typically improves with a single, simple system.",
+        "medical_practice_relevance": "Building this now eases the transition to the long, demanding timelines of medical training.",
+        "warning": "None.",
+        "resources": ["Triage/prioritization frameworks."]
+      },
+      "Established": {
+        "id": "RPT-CSR-S",
+        "interpretation": "You reported generally strong organization and follow-through.",
+        "strength": "This is a well-established strength that will support sustained study habits during training.",
+        "growth": "Extending existing systems to handle competing-priority situations specifically.",
+        "study_advice": "Take on a role (project lead, mentor) that tests these skills under more real pressure.",
+        "wellbeing_advice": "No specific wellbeing note needed here.",
+        "medical_practice_relevance": "Supports sustaining rigorous study habits and meeting clinical documentation and follow-up obligations.",
+        "warning": "None — if paired with low Resilience, this report separately flags an \"overextension risk\" pattern (see §6.2, CR-02).",
+        "resources": ["Project-lead or mentoring opportunities."]
+      },
+      "Strong": {
+        "id": "RPT-CSR-T",
+        "interpretation": "You reported consistently strong organization and follow-through across nearly every scenario.",
+        "strength": "This is one of the clearer strengths in your profile — directly supports the long timelines medical training involves.",
+        "growth": "Practicing flexibility — deliberately letting a plan change without treating it as a failure.",
+        "study_advice": "Mentor others in organization skills — a strong test of whether the systems are truly internalized.",
+        "wellbeing_advice": "Watch for early signs of over-committing, since reliability can attract more responsibility than is sustainable.",
+        "medical_practice_relevance": "Directly supports managing long training timelines and complex clinical responsibilities.",
+        "warning": "None — if paired with low Resilience, this report separately flags an \"overextension risk\" pattern (see §6.2, CR-02).",
+        "resources": ["Mentoring roles in organization/planning."]
+      },
+      "VeryStrong": {
+        "id": "RPT-CSR-VT",
+        "interpretation": "You reported extremely strong, near-uniform organization and follow-through.",
+        "strength": "This is a strong, distinctive asset — but see the Warning Message; it's worth knowing about the shadow side of very high scores here.",
+        "growth": "Practicing \"good enough\" as a deliberate stopping point on lower-stakes tasks, to build resistance to perfectionism.",
+        "study_advice": "Practice intentionally submitting \"good enough\" work on a genuinely low-stakes task, as a deliberate exercise.",
+        "wellbeing_advice": "Watch closely for perfectionism-driven stress; very high scores here sometimes come with self-imposed pressure worth naming to a mentor or advisor.",
+        "medical_practice_relevance": "Directly relevant, but pair with the Warning Message here — sustainable rigor matters more than maximal rigor over a multi-year training arc.",
+        "warning": "Possible perfectionism tendency — very high scores here can sometimes correlate with self-imposed pressure that isn't sustainable over a multi-year training arc; worth a conversation with a mentor if this resonates.",
+        "resources": ["Reflective practice on \"good enough\" as a deliberate skill; conversations with an advisor about sustainable pacing."]
+      }
+    },
+    "RST": {
+      "Emerging": {
+        "id": "RPT-RST-E",
+        "interpretation": "You reported that recovering from setbacks and managing sustained stress currently feels harder than you'd like.",
+        "strength": "Naming this honestly is itself a meaningful strength — this domain is one of the most responsive to deliberate coping-skill building.",
+        "growth": "Building a small, concrete coping-strategy repertoire (even 2–3 go-to strategies) rather than aiming for a full transformation at once.",
+        "study_advice": "Consider connecting with campus wellness or counseling resources to build coping strategies alongside academic support.",
+        "wellbeing_advice": "This is a genuinely learnable set of skills, not a fixed trait — please see the resources note below, and know that reaching out for support is itself a sign of strength, not weakness (Part 1 §2.8).",
+        "medical_practice_relevance": "Medical training is widely documented as high-stress; building coping skills now is one of the most directly useful things you can do before starting.",
+        "warning": "If this reflects ongoing, significant difficulty rather than a general self-assessment, consider talking with a counselor, campus wellness service, or trusted person — this tool is not a substitute for that kind of support.",
+        "resources": ["Campus counseling/wellness services; a short list of concrete coping strategies (built with a counselor or mentor, not self-diagnosed)."]
+      },
+      "Developing": {
+        "id": "RPT-RST-D",
+        "interpretation": "You reported a mixed pattern — recovering well from some setbacks, more affected by others.",
+        "strength": "You already show real recovery capacity in some situations, a workable foundation.",
+        "growth": "Identifying which specific setback types affect you most and building targeted strategies for those.",
+        "study_advice": "Build a short list of go-to coping strategies and practice them before a genuinely stressful period, not during one.",
+        "wellbeing_advice": "Continue building on the strategies that already work for you; this is normal, expected variation.",
+        "medical_practice_relevance": "This supports sustaining engagement through a difficult rotation or a demanding exam period.",
+        "warning": "None.",
+        "resources": ["Proactive coping-strategy building; peer support."]
+      },
+      "Established": {
+        "id": "RPT-RST-S",
+        "interpretation": "You reported generally solid recovery from setbacks and functioning under stress.",
+        "strength": "This is a well-established strength that will support sustained engagement through demanding training.",
+        "growth": "Practicing these strategies proactively (before a hard stretch), not just reactively.",
+        "study_advice": "Maintain existing strategies proactively during lighter periods so they're strong going into harder ones.",
+        "wellbeing_advice": "No specific wellbeing note needed here.",
+        "medical_practice_relevance": "Directly supports functioning well through the genuinely demanding stretches of clinical training.",
+        "warning": "None.",
+        "resources": ["Maintaining existing strategies proactively."]
+      },
+      "Strong": {
+        "id": "RPT-RST-T",
+        "interpretation": "You reported strong, consistent resilience and coping across nearly every scenario.",
+        "strength": "This is a strong, genuinely protective asset for the demanding stretches medical training involves.",
+        "growth": "Making sure resilience doesn't tip into minimizing real strain — checking in with others even when coping well.",
+        "study_advice": "Consider mentoring peers on coping strategies, which reinforces your own practice.",
+        "wellbeing_advice": "No specific wellbeing note needed here.",
+        "medical_practice_relevance": "Directly supports sustained engagement and avoiding burnout trajectory over a multi-year training arc.",
+        "warning": "If paired with very high Conscientiousness, this report separately flags an \"overextension risk\" pattern (see §6.2, CR-02) worth reading if it applies to you.",
+        "resources": ["Peer mentoring on coping strategies."]
+      }
+    }
+  },
+  "interaction_blocks": {
+    "AR-03": {
+      "id": "RPT-AR03",
+      "text": "Pattern noted: wanting certainty before acting. Your responses suggest a strong preference for thorough analysis paired with more discomfort acting on incomplete information. This is a common and very workable combination — the analytical strength is real, and the growth opportunity is practicing \"good enough\" decisions on lower-stakes questions specifically, to build comfort before it's needed in a higher-stakes setting."
+    },
+    "AR-03b": {
+      "id": "RPT-AR03B",
+      "text": "Pattern noted: checking and re-checking before closing. Your responses suggest a strong planning/organizational instinct paired with more discomfort in unclear situations. Consider practicing a deliberate \"close it out\" habit on smaller tasks — setting a stopping point in advance can help build tolerance for finishing without full certainty."
+    },
+    "IH-01": {
+      "id": "RPT-IH01",
+      "text": "Pattern noted: confident reasoning paired with more resistance to correction. This isn't a character flaw — confidence and analytical strength are real assets — but this specific combination is worth deliberate attention, since it's a pattern discussed in medical-error literature as relevant to diagnostic overconfidence. A concrete practice: the next time you're corrected, try pausing before responding and asking one clarifying question before defending your original view."
+    },
+    "CR-02": {
+      "id": "RPT-CR02",
+      "text": "Pattern noted: possible overextension risk. Your responses suggest strong follow-through and reliability paired with more difficulty recovering from setbacks or managing sustained stress. This combination is worth naming honestly, since high reliability can sometimes mean pushing through strain rather than addressing it. Consider building 2–3 concrete coping strategies now, before a demanding stretch, and don't hesitate to loop in a mentor, advisor, or counselor — this is a wellbeing note, not a performance note."
+    },
+    "EC-01": {
+      "id": "RPT-EC01",
+      "text": "Pattern noted: technical orientation. Your responses suggest strong analytical reasoning paired with a more fact-focused communication default. This is a genuine strength combination for technical problem-solving, and the growth opportunity — not deficiency — is practicing perspective-taking specifically in patient-facing or emotionally-loaded contexts, where technical correctness alone isn't always what's needed."
+    },
+    "PC-01": {
+      "id": "RPT-PC01",
+      "text": "Note on very high conscientiousness. Extremely strong organization and follow-through is a real strength, and it's also worth naming that scores this high sometimes come with self-imposed pressure that isn't sustainable across a multi-year training arc. If this resonates, a conversation with a mentor about sustainable pacing (not lowering your standards) may be worthwhile."
+    },
+    "OA-01": {
+      "id": "RPT-OA01",
+      "text": "Note on very high analytical reasoning. Extremely strong deliberate reasoning is a genuine asset, and it's also worth naming that scores this high can occasionally correlate with over-analysis on lower-stakes decisions. If time spent deliberating ever feels disproportionate to what's at stake, a deliberate \"good enough, move on\" rule for low-stakes choices can help."
+    }
+  },
+  "safety_gate": {
+    "message": "Thank you for your honesty in these responses. Based on what you shared, we want to make sure you have support before anything else — this isn't something an automated report is the right tool for.",
+    "resources": [
+      {
+        "name": "988 Suicide & Crisis Lifeline (US)",
+        "detail": "Call or text 988, available 24/7."
+      },
+      {
+        "name": "Crisis Text Line",
+        "detail": "Text HOME to 741741, available 24/7."
+      },
+      {
+        "name": "Campus counseling / student wellness services",
+        "detail": "Most colleges and universities offer free, confidential support — this is often the fastest way to reach someone who knows your specific context."
+      },
+      {
+        "name": "If you are outside the US",
+        "detail": "Please look up your local emergency number or a crisis line for your country."
+      }
+    ],
+    "note": "If you'd like, you can return and complete the assessment another time. There's no rush."
+  },
+  "footer": {
+    "non_admissions_notice": "This report is a self-reflection tool. It is not validated for, and must not be used in, admissions, hiring, or credentialing decisions.",
+    "non_diagnostic_notice": "This report does not diagnose any medical or mental health condition.",
+    "crisis_notice": "If you're currently in emotional distress or crisis, please don't rely on this tool — contact a crisis line or trusted professional directly."
+  }
+}

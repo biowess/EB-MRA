@@ -1,0 +1,149 @@
+/* ─────────────────────────────────────────────────────────────
+ * ScenarioQuestion.module.css
+ *
+ * All values reference design tokens from tokens.css.
+ * No hard-coded colours, fonts, or spacing values.
+ *
+ * Visual intent: scenario prose is set generously at the reading
+ * column width. Options stack vertically with a letter badge on
+ * the left. Selected state is a subtle border + background shift
+ * — not a loud fill.
+ * ───────────────────────────────────────────────────────────── */
+
+/* ── Container ──────────────────────────────────────────── */
+
+.container {
+  width: 100%;
+}
+
+/* ── Scenario text ──────────────────────────────────────── */
+
+.scenarioText {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-ink);
+  margin-block-end: var(--space-8);
+
+  /* Subtle left decoration — editorial feel */
+  padding-inline-start: var(--space-6);
+  border-inline-start: 2px solid var(--color-border);
+}
+
+/* ── Option list ────────────────────────────────────────── */
+
+.optionList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* ── Individual option button ───────────────────────────── */
+
+.option {
+  /* Layout: letter badge + text side by side */
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  width: 100%;
+
+  /* Generous tap target height */
+  min-height: 56px;
+  padding: var(--space-4) var(--space-5);
+
+  /* Default surface */
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-align: left;
+
+  /* Typography reset */
+  font-family: var(--font-body);
+  color: var(--color-ink);
+
+  transition: var(--transition-color),
+              border-color var(--transition-base),
+              box-shadow var(--transition-base);
+}
+
+/* Hover */
+.option:hover {
+  border-color: var(--color-border-dark);
+  background-color: var(--color-accent-subtle);
+}
+
+/* Selected */
+.option[data-selected="true"] {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent-subtle);
+  box-shadow: inset 0 0 0 1px var(--color-accent);
+}
+
+/* Focus ring */
+.option:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* ── Letter badge ───────────────────────────────────────── */
+
+.letterBadge {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border-light);
+
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-ink-muted);
+  letter-spacing: var(--tracking-wide);
+
+  transition: background-color var(--transition-base),
+              border-color var(--transition-base),
+              color var(--transition-base);
+}
+
+/* Hover badge */
+.option:hover .letterBadge {
+  background-color: var(--color-accent-subtle);
+  border-color: var(--color-border-dark);
+  color: var(--color-ink);
+}
+
+/* Selected badge */
+.option[data-selected="true"] .letterBadge {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-accent-fg);
+}
+
+/* ── Option prose text ──────────────────────────────────── */
+
+.optionText {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-ink-muted);
+  flex: 1;
+  align-self: center;
+}
+
+.option[data-selected="true"] .optionText {
+  color: var(--color-ink);
+}
+
+/* ── Reduced motion ─────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .option,
+  .letterBadge {
+    transition: none;
+  }
+}

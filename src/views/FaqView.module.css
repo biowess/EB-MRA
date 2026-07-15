@@ -1,0 +1,349 @@
+/* ════════════════════════════════════════════════════════════
+ * FaqView.module.css — Frequently Asked Questions page styles
+ * Follows "Luxurious, Calm" design language (mirrors PrivacyView)
+ * ════════════════════════════════════════════════════════════ */
+
+.page {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  padding-top: calc(var(--space-16) + 3rem);
+  padding-bottom: var(--space-20);
+}
+
+.container {
+  max-width: var(--column-reading);
+  margin-inline: auto;
+  padding-inline: var(--spacing-page-x);
+}
+
+/* ── Page header ──────────────────────────────────────────── */
+.header {
+  margin-bottom: var(--space-10);
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.eyebrow {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+  margin-bottom: var(--space-3);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-3xl));
+  font-weight: 500;
+  color: var(--color-ink);
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-4);
+}
+
+.meta {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-ink-faint);
+}
+
+/* ── Intro callout ────────────────────────────────────────── */
+.callout {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  padding: var(--space-5) var(--space-6);
+  margin-bottom: var(--space-10);
+}
+
+.callout p {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+  line-height: var(--leading-relaxed);
+}
+
+/* ── Category heading ─────────────────────────────────────── */
+.categoryHeading {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-4);
+  margin-top: var(--space-10);
+}
+
+/* ── FAQ accordion item ──────────────────────────────────── */
+.item {
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.item:first-of-type {
+  border-top: 1px solid var(--color-border-light);
+}
+
+/* The <button> that acts as the accordion toggle */
+.question {
+  all: unset;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  width: 100%;
+  padding: var(--space-5) 0;
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-ink);
+  line-height: var(--leading-normal);
+  cursor: pointer;
+  transition: color var(--transition-base);
+  box-sizing: border-box;
+}
+
+.question:hover {
+  color: var(--color-accent);
+}
+
+.question:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: var(--radius-sm);
+}
+
+/* Chevron icon */
+.chevron {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: var(--color-ink-faint);
+  transition: transform 300ms cubic-bezier(0.25, 0.1, 0.25, 1),
+    color var(--transition-base);
+  margin-top: 3px;
+  /* optical alignment with first text line */
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+  color: var(--color-accent);
+}
+
+/* Answer panel — animated collapse */
+.answerWrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.answerWrapperOpen {
+  grid-template-rows: 1fr;
+}
+
+.answerInner {
+  overflow: hidden;
+}
+
+.answer {
+  padding-bottom: var(--space-6);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-ink-muted);
+  line-height: var(--leading-relaxed);
+}
+
+.answer p {
+  margin-bottom: var(--space-3);
+}
+
+.answer p:last-child {
+  margin-bottom: 0;
+}
+
+.answer strong {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+.answer code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.875em;
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  padding: 1px 5px;
+  color: var(--color-ink);
+}
+
+.answer a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color var(--transition-base);
+}
+
+.answer a:hover {
+  color: var(--color-accent-hover);
+}
+
+/* ── Score legend table ───────────────────────────────────── */
+.scoreTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+}
+
+.scoreTable th {
+  text-align: left;
+  font-weight: 600;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.scoreTable td {
+  padding: var(--space-3) var(--space-4);
+  vertical-align: top;
+  color: var(--color-ink-muted);
+  border-bottom: 1px solid var(--color-border-light);
+  line-height: var(--leading-normal);
+}
+
+.scoreTable tr:last-child td {
+  border-bottom: none;
+}
+
+/* ── Divider ─────────────────────────────────────────────── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--color-border-light);
+  margin-block: var(--space-8);
+}
+
+/* ── Contact / CTA callout ───────────────────────────────── */
+.ctaBlock {
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-10) var(--space-8);
+  margin-top: var(--space-12);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.ctaBlock h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 500;
+  color: var(--color-ink);
+  margin-bottom: var(--space-4);
+  letter-spacing: var(--tracking-tight);
+}
+
+.ctaBlock p {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+  line-height: var(--leading-relaxed);
+  max-width: 52ch;
+  margin-bottom: var(--space-7);
+}
+
+/* ── CTA button — mirrors HomeView hero exactly ──────────── */
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  margin-top: var(--space-4);
+  gap: var(--space-3);
+  font-family: var(--font-body) !important;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-accent-fg) !important;
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-10);
+  cursor: pointer;
+  text-decoration: none !important;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 300ms ease,
+    background-color 300ms ease,
+    border-color 300ms ease,
+    letter-spacing 300ms ease,
+    gap 300ms ease;
+  box-shadow: 0 2px 0 0 var(--color-accent-hover),
+    0 4px 16px 0 rgba(139, 111, 71, 0.20);
+  min-height: 44px;
+}
+
+/* Shimmer underlay */
+.ctaBtn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg,
+      transparent 35%,
+      rgba(255, 255, 255, 0.10) 50%,
+      transparent 65%);
+  transform: translateX(-100%);
+  transition: transform 500ms ease;
+  pointer-events: none;
+}
+
+.ctaBtn:hover {
+  background-color: var(--color-accent-hover) !important;
+  border-color: var(--color-accent-hover) !important;
+  color: var(--color-accent-fg) !important;
+  text-decoration: none !important;
+  transform: translateY(-3px);
+  letter-spacing: calc(var(--tracking-wide) + 0.01em);
+  gap: var(--space-4);
+  box-shadow: 0 3px 0 0 #5e4525,
+    0 8px 24px 0 rgba(139, 111, 71, 0.30);
+}
+
+.ctaBtn:hover::before {
+  transform: translateX(100%);
+}
+
+.ctaBtn:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 0 var(--color-accent-hover),
+    0 2px 8px 0 rgba(139, 111, 71, 0.15);
+  transition-duration: 80ms;
+}
+
+.ctaBtn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-accent);
+}
+
+/* Animated arrow inside CTA */
+.ctaBtnArrow {
+  display: inline-flex;
+  align-items: center;
+  transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  flex-shrink: 0;
+}
+
+.ctaBtn:hover .ctaBtnArrow {
+  transform: translateX(3px);
+}

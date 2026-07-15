@@ -1,0 +1,229 @@
+/* ════════════════════════════════════════════════════════════
+ * Footer.module.css — EBMRA Multi-Column Site Footer
+ * Follows the "Luxurious, Calm" design language from tokens.css
+ * ════════════════════════════════════════════════════════════ */
+
+/* ── Outer wrapper ─────────────────────────────────────────── */
+.footer {
+  width: 100%;
+  background-color: var(--color-surface-alt);
+  border-top: 1px solid var(--color-border);
+  margin-top: auto;
+}
+
+/* ── Main link grid ────────────────────────────────────────── */
+.footerMain {
+  max-width: var(--column-full);
+  margin-inline: auto;
+  padding-inline: var(--spacing-page-x);
+  padding-block: var(--space-12) var(--space-10);
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: var(--space-10);
+}
+
+/* ── Brand column (leftmost) ───────────────────────────────── */
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.brandName {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  color: var(--color-ink);
+  text-decoration: none !important;
+  line-height: 1;
+  text-shadow: 0 1px 2px rgba(30, 27, 22, 0.10);
+}
+
+.brandTextBold {
+  font-weight: 700;
+}
+
+.brandTextLight {
+  font-weight: 400;
+}
+
+.eightDotCircle {
+  color: var(--color-accent);
+  margin-top: 2px;
+}
+
+.brandName:hover {
+  color: var(--color-accent);
+  text-decoration: none !important;
+}
+
+.brandTagline {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+  line-height: var(--leading-normal);
+  max-width: 22ch;
+}
+
+.copyright {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-ink-faint);
+  line-height: var(--leading-snug);
+  margin-top: var(--space-2);
+}
+
+/* ── Link columns ──────────────────────────────────────────── */
+.linkCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.colHeading {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+  margin-bottom: var(--space-1);
+}
+
+.footerLink {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+  text-decoration: none;
+  transition: var(--transition-color);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  cursor: pointer;
+}
+
+.footerLink:hover {
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+.footerLink svg {
+  flex-shrink: 0;
+  opacity: 0.6;
+  transition: opacity var(--transition-fast);
+}
+
+.footerLink:hover svg {
+  opacity: 1;
+}
+
+/* ── Source-available badge ─────────────────────────────────── */
+.badge {
+  display: inline-block;
+  margin-top: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  border: 1.5px solid var(--color-border-dark);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition-color), border-color var(--transition-base);
+}
+
+.badge:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* ── Stack info ─────────────────────────────────────────────── */
+.stackInfo {
+  margin-top: var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-ink-faint);
+  line-height: var(--leading-relaxed);
+}
+
+/* ── Disclaimer band ───────────────────────────────────────── */
+.disclaimerBand {
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+  background-color: var(--color-surface);
+  padding-block: var(--space-5);
+}
+
+.disclaimerInner {
+  max-width: var(--column-full);
+  margin-inline: auto;
+  padding-inline: var(--spacing-page-x);
+}
+
+.disclaimer {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-ink-muted);
+  line-height: var(--leading-relaxed);
+  text-align: center;
+}
+
+.disclaimer strong {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+/* ── Bottom bar ────────────────────────────────────────────── */
+.footerBottom {
+  max-width: var(--column-full);
+  margin-inline: auto;
+  padding-inline: var(--spacing-page-x);
+  padding-block: var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.bottomTagline {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-ink-faint);
+  font-style: italic;
+}
+
+.bottomVersion {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
+  color: var(--color-ink-faint);
+  letter-spacing: 0.04em;
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .footerMain {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+  .brandCol {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 540px) {
+  .footerMain {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  .footerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+}

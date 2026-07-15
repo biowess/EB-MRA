@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "type": "object",
+  "required": [
+    "respondent_id",
+    "session_id",
+    "started_at",
+    "answers",
+    "consent_confirmed",
+    "age_bracket_confirmed_16_plus"
+  ],
+  "properties": {
+    "respondent_id": {
+      "type": "string",
+      "description": "Opaque, non-PII respondent identifier"
+    },
+    "session_id": {
+      "type": "string"
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completed_at": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "null if submission is a partial/abandoned session"
+    },
+    "consent_confirmed": {
+      "type": "boolean",
+      "description": "Must be true; gates access per Part 1 §1.5(1)-(2) exclusion criteria"
+    },
+    "age_bracket_confirmed_16_plus": {
+      "type": "boolean",
+      "description": "Must be true; gates access per Part 1 §1.5(2)"
+    },
+    "answers": {
+      "type": "object",
+      "description": "Map of question_id -> response",
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "description": "LIKERT5 raw value"
+          },
+          {
+            "type": "string",
+            "enum": ["A", "B", "C", "D"],
+            "description": "Scenario item option"
+          }
+        ]
+      }
+    },
+    "item_timestamps": {
+      "type": "object",
+      "description": "OPTIONAL map of question_id -> ISO timestamp when answered, used for response-time-anomaly validation (§10.5). Absence of this field disables that specific check without failing validation overall.",
+      "additionalProperties": {
+        "type": "string",
+        "format": "date-time"
+      }
+    }
+  }
+}

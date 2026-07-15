@@ -1,0 +1,233 @@
+/* ─────────────────────────────────────────────────────────────
+   AssessmentRunner.module.css
+   Scoped styles for the AssessmentRunner view.
+   All colours / fonts reference design tokens (tokens.css).
+   No Tailwind utilities.
+   ───────────────────────────────────────────────────────────── */
+
+/* ── Question counter ──────────────────────────────────────── */
+
+.questionCounter {
+  font-family: var(--font-body, Georgia, serif);
+  font-size: 0.8125rem;          /* 13px */
+  color: var(--color-ink-muted, #6b6b6b);
+  letter-spacing: 0.06em;
+  text-align: right;
+  margin: 0 0 1.5rem 0;
+  user-select: none;
+}
+
+.counterCurrent {
+  font-variant-numeric: tabular-nums;
+  color: var(--color-ink, #1a1a1a);
+  font-weight: 500;
+}
+
+.counterSep {
+  margin: 0 0.15em;
+  opacity: 0.45;
+}
+
+.counterTotal {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.65;
+}
+
+/* ── Question area ─────────────────────────────────────────── */
+
+.questionArea {
+  margin-top: 1rem;
+  animation: questionFadeIn 350ms cubic-bezier(0.25, 0.1, 0.25, 1) both;
+}
+
+@keyframes questionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .questionArea {
+    animation: none;
+  }
+}
+
+/* ── Completion screen ─────────────────────────────────────── */
+
+.completeScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 2rem 0 3rem;
+}
+
+.completeHeading {
+  font-family: var(--font-heading, 'Playfair Display', Georgia, serif);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.18;
+  color: var(--color-ink, #1a1a1a);
+  margin: 0;
+}
+
+.completeBody {
+  font-family: var(--font-body, Georgia, serif);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-ink, #1a1a1a);
+  max-width: 52ch;
+  margin: 0;
+}
+
+.completeHint {
+  font-family: var(--font-body, Georgia, serif);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-ink-muted, #6b6b6b);
+  margin: 0;
+  font-style: italic;
+}
+
+/* ── Navigation ────────────────────────────────────────────── */
+
+.keyHint {
+  display: none;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  opacity: 0.5;
+  margin-left: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .keyHint {
+    display: inline-block;
+  }
+}
+
+.navigationRow {
+  /* Sticky to viewport bottom until it reaches the footer */
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+
+  /* Glassmorphism treatment */
+  background-color: rgba(247, 243, 237, 0.85); /* var(--color-bg) with opacity */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(217, 208, 196, 0.6); /* Subtle border */
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.02);
+  
+  /* Safe area for iOS */
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.navigationInner {
+  /* Constrain to reading column, centred */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--column-reading, 680px);
+  margin-inline: auto;
+  padding: 1.25rem var(--spacing-page-x, 1.5rem);
+}
+
+.navButton, .submitButton {
+  font-family: var(--font-body, Georgia, serif);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md, 6px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.navButton {
+  background: transparent;
+  color: var(--color-ink, #1a1a1a);
+  border: 1px solid var(--color-border-dark, #d1d1d1);
+}
+
+.navButton:hover:not(:disabled) {
+  background: var(--color-surface-alt, #f5f5f5);
+  border-color: var(--color-ink-muted, #6b6b6b);
+}
+
+.navButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.submitButton {
+  background: var(--color-ink, #1a1a1a);
+  color: var(--color-bg, #faf9f7);
+  border: 1px solid var(--color-ink, #1a1a1a);
+}
+
+.submitButton:hover {
+  background: var(--color-ink-muted, #6b6b6b);
+  border-color: var(--color-ink-muted, #6b6b6b);
+}
+
+/* ── Toast ─────────────────────────────────────────────────── */
+
+.toastError {
+  position: fixed;
+  bottom: var(--space-8, 2rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  
+  /* Light beige / Bronze kind of thing */
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-md);
+  padding: var(--space-3, 0.75rem) var(--space-6, 1.5rem);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-ink);
+  
+  /* Bronze-like shadow */
+  box-shadow: 0 8px 24px rgba(139, 90, 43, 0.15); 
+  white-space: normal;
+  width: max-content;
+  max-width: calc(100vw - 2rem);
+  text-align: center;
+  
+  animation: toastSlideIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.toastFadeOut {
+  animation: toastSlideOut 0.3s ease-in forwards;
+}
+
+@keyframes toastSlideIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes toastSlideOut {
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+}

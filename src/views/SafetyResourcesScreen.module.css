@@ -1,0 +1,537 @@
+/*
+ * SafetyResourcesScreen.module.css
+ *
+ * Styles for the safety gate crisis support page.
+ * ALL values reference design tokens from tokens.css.
+ * The body.safety-theme override in tokens.css cascades pastel-blue
+ * tones through these token references automatically.
+ *
+ * No Tailwind utility classes used here.
+ */
+
+/* ── Container ──────────────────────────────────────────────── */
+.container {
+  margin-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-bottom: var(--space-12);
+}
+
+/* ── Hero section with heart icon ───────────────────────────── */
+.heroSection {
+  margin-bottom: var(--space-6);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-heading);
+  font-size: clamp(var(--text-2xl), 5vw, var(--text-3xl));
+  font-weight: 400;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-ink);
+}
+
+.heartIcon {
+  flex-shrink: 0;
+  color: var(--color-accent);
+  /* Subtle gentle pulse animation */
+  animation: gentlePulse 3s ease-in-out infinite;
+}
+
+@keyframes gentlePulse {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+
+/* ── Typography ─────────────────────────────────────────────── */
+.leadText {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-ink);
+  margin-bottom: var(--space-4);
+}
+
+.bodyText {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-ink);
+  margin-bottom: var(--space-4);
+}
+
+.bodyText:last-child {
+  margin-bottom: 0;
+}
+
+.bodyTextMuted {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-ink-muted);
+  margin-bottom: var(--space-4);
+}
+
+.bodyTextEmphasis {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-ink);
+  margin-top: var(--space-6);
+  padding: var(--space-4) var(--space-5);
+  background-color: var(--color-accent-subtle);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+}
+
+/* ── Section headings ───────────────────────────────────────── */
+.sectionHeading {
+  font-family: var(--font-heading);
+  font-size: clamp(var(--text-xl), 3vw, var(--text-2xl));
+  font-weight: 500;
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-ink);
+  margin-bottom: var(--space-4);
+}
+
+/* ── Dividers ───────────────────────────────────────────────── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--color-border-light);
+  margin-block: var(--space-8);
+}
+
+/* ── Resource list (with SVG icons) ─────────────────────────── */
+.resourceList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.resourceItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-snug);
+  color: var(--color-ink);
+  transition: border-color var(--transition-base),
+              background-color var(--transition-base);
+}
+
+.resourceItem:hover {
+  border-color: var(--color-border-dark);
+  background-color: var(--color-surface-alt);
+}
+
+.resourceIcon {
+  flex-shrink: 0;
+  color: var(--color-accent);
+}
+
+/* ── Plain resource list (international) ────────────────────── */
+.resourceListPlain {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.resourceListPlain li {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-ink-muted);
+  padding-left: var(--space-5);
+  position: relative;
+}
+
+.resourceListPlain li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  opacity: 0.6;
+}
+
+/* ── Emergency card (Tunisia) ───────────────────────────────── */
+.emergencyCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.emergencyRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.emergencyLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.emergencyIcon {
+  flex-shrink: 0;
+  color: var(--color-accent);
+}
+
+.emergencyNumber {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.emergencyNumber:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.emergencyNote {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-ink-faint);
+  font-style: italic;
+  border-top: 1px solid var(--color-border-light);
+  padding-top: var(--space-3);
+}
+
+/* ── Country card (US etc.) ─────────────────────────────────── */
+.countryCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
+}
+
+.countryHeading {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--color-ink);
+  margin-bottom: var(--space-4);
+}
+
+.countryRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  padding: var(--space-2) 0;
+}
+
+.countryRow + .countryRow {
+  border-top: 1px solid var(--color-border-light);
+}
+
+.countryLabel {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.countryDetail {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-ink-muted);
+}
+
+.phoneLink {
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.phoneLink:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── Action buttons ─────────────────────────────────────────── */
+.actionsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-3);
+  max-width: 360px;
+}
+
+/* Primary CTA — Call 190 */
+.callButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  line-height: 1;
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--color-accent);
+  background-color: var(--color-accent);
+  color: var(--color-accent-fg);
+  text-decoration: none;
+  cursor: pointer;
+  min-height: 48px;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    transform 200ms ease,
+    box-shadow var(--transition-base);
+  box-shadow: 0 2px 8px rgba(74, 127, 170, 0.20);
+}
+
+.callButton:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  color: var(--color-accent-fg);
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(74, 127, 170, 0.30);
+}
+
+.callButton:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 4px rgba(74, 127, 170, 0.15);
+  transition-duration: 80ms;
+}
+
+.callButton:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* Secondary — I've contacted someone */
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  line-height: 1;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--color-accent);
+  background-color: transparent;
+  color: var(--color-accent);
+  cursor: pointer;
+  min-height: 44px;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base);
+}
+
+.secondaryButton:hover {
+  background-color: var(--color-accent-subtle);
+  border-color: var(--color-accent-hover);
+  color: var(--color-accent-hover);
+}
+
+.secondaryButton:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* Ghost — Return to Home */
+.ghostButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  letter-spacing: var(--tracking-wide);
+  line-height: 1;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background-color: transparent;
+  color: var(--color-ink-muted);
+  cursor: pointer;
+  text-decoration: none;
+  min-height: 44px;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base);
+}
+
+.ghostButton:hover {
+  background-color: var(--color-surface-alt);
+  border-color: var(--color-border-dark);
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+.ghostButton:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* ── Accordion ──────────────────────────────────────────────── */
+.accordionWrapper {
+  margin-top: var(--space-6);
+}
+
+.accordionTrigger {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-4) var(--space-5);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-ink-muted);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-align: left;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base);
+}
+
+.accordionTrigger:hover {
+  background-color: var(--color-surface-alt);
+  border-color: var(--color-border-dark);
+  color: var(--color-ink);
+}
+
+.accordionTrigger:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.accordionChevron {
+  flex-shrink: 0;
+  color: var(--color-ink-faint);
+  transition: transform var(--transition-base);
+}
+
+.accordionChevronOpen {
+  transform: rotate(90deg);
+}
+
+.accordionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 400ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.accordionContentOpen {
+  max-height: 400px;
+}
+
+.accordionInner {
+  padding: var(--space-5) var(--space-5) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.accordionInner p {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--color-ink-muted);
+}
+
+/* ── Disclaimer ─────────────────────────────────────────────── */
+.disclaimer {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-ink-faint);
+  font-style: italic;
+  margin-top: var(--space-8);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-light);
+  text-align: center;
+}
+
+/* ── Reduced motion ─────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .heartIcon {
+    animation: none;
+  }
+
+  .accordionContent {
+    transition: none;
+  }
+
+  .accordionChevron {
+    transition: none;
+  }
+
+  .callButton,
+  .secondaryButton,
+  .ghostButton,
+  .accordionTrigger,
+  .resourceItem {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .emergencyRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .countryRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actionsSection {
+    max-width: 100%;
+  }
+}

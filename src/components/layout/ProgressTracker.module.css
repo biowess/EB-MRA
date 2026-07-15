@@ -1,0 +1,40 @@
+/*
+ * ProgressTracker.module.css
+ *
+ * Scoped styles for the ProgressTracker component.
+ * All values reference design tokens from tokens.css.
+ * No Tailwind utility classes.
+ */
+
+/* ── Track — the empty rail ──────────────────────────────────── */
+.trackContainer {
+  width: 100%;
+  display: flex;
+  gap: 4px;
+}
+
+.track {
+  flex: 1;
+  height: 3px;
+  background-color: var(--color-border-light);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  /* Provide comfortable tap/click area without bloating the visual */
+  padding-block: 0;
+}
+
+/* ── Fill — the accent-coloured progress indicator ───────────── */
+.fill {
+  height: 100%;
+  background-color: var(--color-accent);
+  border-radius: 0 var(--radius-pill) var(--radius-pill) 0;
+  /* Slow, deliberate transition — never jarring */
+  transition: width var(--transition-slow);
+}
+
+/* ─── Reduced-motion override ────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .fill {
+    transition: none;
+  }
+}

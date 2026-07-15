@@ -1,0 +1,232 @@
+/*
+ * PageShell.module.css
+ *
+ * Scoped styles for the PageShell layout component.
+ * ALL values come from design tokens (--token-name).
+ * No Tailwind utility classes are used in this file.
+ */
+
+/* ── Outer shell ────────────────────────────────────────────── */
+.shell {
+  min-height: 100dvh;
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  /* Push content below the fixed 64px top navigation bar */
+  padding-top: 64px;
+}
+
+/* ── Progress track (accent only here) ─────────────────────── */
+.progressTrack {
+  position: fixed;
+  /* Sit just below the nav bar */
+  top: 64px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 3px;
+  background-color: var(--color-border-light);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: var(--color-accent);
+  border-radius: 0 var(--radius-pill) var(--radius-pill) 0;
+  transition: width var(--transition-slow);
+}
+
+/* ── Reading column ─────────────────────────────────────────── */
+.column {
+  width: 100%;
+  max-width: var(--column-reading); /* 680px */
+  margin-inline: auto;
+  padding-inline: var(--spacing-page-x);
+  padding-block: var(--spacing-page-y);
+  flex: 1;
+}
+
+/* ── Page header (label + title + divider) ─────────────────── */
+.pageHeader {
+  margin-bottom: var(--space-10);
+}
+
+.headerTitleRow {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.backButton {
+  background: none;
+  border: none;
+  padding: var(--space-1);
+  margin: calc(var(--space-1) * -1); /* visual alignment */
+  cursor: pointer;
+  color: var(--color-ink-faint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-color), background-color var(--transition-color);
+  margin-top: calc(var(--space-1) * -1); /* slight optical alignment with text */
+}
+
+.backButton:hover {
+  color: var(--color-ink);
+  background-color: var(--color-surface-alt);
+}
+
+.headerTextGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Eyebrow label */
+.label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+  margin-bottom: var(--space-3);
+}
+
+/* H1 title */
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(var(--text-2xl), 5vw, var(--text-3xl));
+  font-weight: 400;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-ink);
+  margin-bottom: 0; /* Margin moved to row */
+}
+
+/* Step dots row */
+.stepDots {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.stepDot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-border);
+  transition: background-color var(--transition-base);
+}
+
+.stepDot[data-active='true'] {
+  background-color: var(--color-accent); /* accent — only contextually here */
+}
+
+/* Divider */
+.divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin-bottom: var(--space-8);
+}
+
+/* ── Content area ───────────────────────────────────────────── */
+.content {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-ink);
+}
+
+/* Prose spacing within content */
+.content h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 500;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-snug);
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-4);
+  color: var(--color-ink);
+}
+
+.content h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  line-height: var(--leading-snug);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-3);
+  color: var(--color-ink);
+}
+
+.content p {
+  font-family: var(--font-body);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-4);
+  color: var(--color-ink);
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+}
+
+/* ─────────────────────────────────────────────────────────────
+ * Interactive button — defined here so the demo in App.tsx
+ * can import the class. All transitions are 300ms (--transition-base).
+ * No Tailwind classes used.
+ * ──────────────────────────────────────────────────────────── */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wide);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--color-ink);
+  background-color: transparent;
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-6);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: var(--transition-color),
+              border-color var(--transition-base),
+              box-shadow var(--transition-base);
+  /* Elevation: border-based only */
+  box-shadow: var(--elevation-2);
+}
+
+.button:hover {
+  background-color: var(--color-surface-alt);
+  border-color: var(--color-border-dark);
+  box-shadow: var(--elevation-3);
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.button:active {
+  background-color: var(--color-surface-alt);
+  transform: none; /* no layout shift */
+}
+
+/* Primary variant — subtle filled */
+.buttonPrimary {
+  composes: button;
+  background-color: var(--color-surface-alt);
+  border-color: var(--color-border-dark);
+}
+
+.buttonPrimary:hover {
+  background-color: var(--color-ink);
+  color: var(--color-bg);
+  border-color: var(--color-ink);
+}

@@ -1,0 +1,165 @@
+/* ─────────────────────────────────────────────────────────────
+ * LikertQuestion.module.css
+ *
+ * All values reference design tokens from tokens.css.
+ * No hard-coded colours, fonts, or spacing values.
+ *
+ * Visual intent: five calm, understated radio-style buttons
+ * laid out in a horizontal row. The selected state is
+ * communicated by a border shift + subtle background tint —
+ * never by loud fills or heavy shadows.
+ * ───────────────────────────────────────────────────────────── */
+
+/* ── Fieldset reset ─────────────────────────────────────── */
+
+.fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-inline-size: 0;
+  /* browser fieldset has width constraint by default */
+}
+
+/* ── Legend (question text) ─────────────────────────────── */
+
+.legend {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-ink);
+  font-weight: 400;
+  display: block;
+  /* full-width, not inline-block */
+  margin-block-end: var(--space-8);
+  /* Ensure a predictable fixed position for the buttons below by allocating space for up to 3 lines of text */
+  min-height: calc(3 * var(--leading-relaxed) * 1em);
+}
+
+@media (min-width: 768px) {
+  .legend {
+    min-height: calc(2 * var(--leading-relaxed) * 1em);
+  }
+}
+
+/* ── Option row ─────────────────────────────────────────── */
+
+.optionRow {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  /* wraps on narrow viewports */
+  align-items: stretch;
+}
+
+/* ── Individual option button ───────────────────────────── */
+
+.option {
+  flex: 1 1 0;
+  /* equal-width columns */
+  min-width: 52px;
+  /* never too cramped on mobile */
+
+  /* Generous tap target (≥ 44px height per WCAG 2.5.5) */
+  min-height: 72px;
+  padding: var(--space-3) var(--space-2);
+
+  /* Layout: numeral above, label below */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-2);
+
+  /* Default surface state */
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+
+  /* Typography resets (button elements inherit nothing useful) */
+  font-family: var(--font-body);
+  color: var(--color-ink-muted);
+  text-align: center;
+
+  transition: var(--transition-color),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+/* Hover — slight border darkening, warm surface tint */
+.option:hover {
+  border-color: var(--color-border-dark);
+  background-color: var(--color-accent-subtle);
+  color: var(--color-ink);
+}
+
+/* Selected state — accent border ring, tinted background */
+.option[data-selected="true"] {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent-subtle);
+  color: var(--color-ink);
+  box-shadow: inset 0 0 0 1px var(--color-accent);
+  /* double-border effect */
+}
+
+/* Focus ring */
+.option:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* ── Numeral — visual anchor ────────────────────────────── */
+
+.numeral {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 400;
+  line-height: 1;
+  color: inherit;
+  letter-spacing: var(--tracking-tight);
+}
+
+/* Selected state numeral — accent ink */
+.option[data-selected="true"] .numeral {
+  color: var(--color-accent);
+}
+
+/* ── Option label — quiet, secondary ────────────────────── */
+
+.optionLabel {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-ink-faint);
+  text-align: center;
+}
+
+.option[data-selected="true"] .optionLabel,
+.option:hover .optionLabel {
+  color: var(--color-ink-muted);
+}
+
+/* ── Pole labels ────────────────────────────────────────── */
+
+.poles {
+  display: flex;
+  justify-content: space-between;
+  margin-block-start: var(--space-3);
+}
+
+.poleText {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-ink-faint);
+  letter-spacing: var(--tracking-wide);
+  font-style: italic;
+}
+
+/* ── Reduced motion ─────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .option {
+    transition: none;
+  }
+}

@@ -1,0 +1,82 @@
+/*
+ * index.css — EBMRA global stylesheet
+ *
+ * Import order:
+ *   1. Tailwind base (provides reset + utilities for any Tailwind classes)
+ *   2. Design tokens (tokens.css overrides body/heading defaults)
+ *
+ * tokens.css owns: body font, heading font, background, colour palette,
+ * spacing scale, motion variables, border-elevation rules.
+ * Do NOT add loose Tailwind utility overrides here that conflict with tokens.
+ */
+
+@import "tailwindcss";
+@import "./styles/tokens.css";
+
+/* ── @font-face declarations ───────────────────────────────────
+ * Self-hosted fonts referenced by tokens.css via --font-* variables.
+ * Ranges cover the full weight axis so variable fonts work correctly.
+ * ──────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url('/src/assets/fonts/cY9qfjOCX1hbuyalUrK49dLac06G1ZGsZBtoBCzBDXXD9JVF438weI_ADA.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url('/src/assets/fonts/cY9kfjOCX1hbuyalUrK439vogqC9yFZCYg7oRZaLP4obnf7fTXglsMwoT-ZA.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url('/src/assets/fonts/vEFy2_tTDB4M7-auWDN0ahZJW3IX2ih5nk3AucvUHf6OAVIJmeUDygwjihdqrhw.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: italic;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url('/src/assets/fonts/vEF02_tTDB4M7-auWDN0ahZJW1ge6NmXpVAHV83Bfb_US2D2QYxoUKIkn98pRl9dCw.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/src/assets/fonts/DancingScript-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/src/assets/fonts/DancingScript-Bold.ttf') format('truetype');
+}
+
+/*
+ * @theme block — exposes tokens as Tailwind theme values so that any
+ * *intentional* Tailwind serif/sans class still maps to our fonts.
+ * This does NOT introduce utility classes into our own components;
+ * it only ensures design-token parity if Tailwind utilities are ever
+ * needed elsewhere in the project.
+ */
+@theme {
+  --font-sans:   'Source Serif 4', Georgia, serif;
+  --font-serif:  'Newsreader', Georgia, serif;
+  --color-parchment: #f7f3ed;
+  --color-ink:   #1e1b16;
+  --color-accent: #8b6f47;
+}
+

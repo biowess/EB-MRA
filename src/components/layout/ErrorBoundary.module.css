@@ -1,0 +1,42 @@
+/*
+ * ErrorBoundary.module.css
+ *
+ * Scoped styles for the ErrorBoundary fallback UI.
+ * All values reference design tokens from tokens.css.
+ * No Tailwind utility classes.
+ *
+ * Design intent: calm, considered — nothing alarming.
+ * The fallback should feel like a considered pause, not a crash.
+ */
+
+/* ── Fallback container ──────────────────────────────────────── */
+.fallback {
+  /* Surface-level card, border-based elevation only */
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-10) var(--space-8);
+  /* Max reading width — mirrors the column constraint */
+  max-width: var(--column-reading);
+  margin-inline: auto;
+}
+
+/* ── Heading line ─────────────────────────────────────────────── */
+.heading {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 400;                         /* unhurried weight */
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-ink);
+  margin-bottom: var(--space-4);
+}
+
+/* ── Supporting body copy ─────────────────────────────────────── */
+.body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-ink-muted);
+  margin-bottom: 0; /* override the global p + p rule's top margin */
+}
