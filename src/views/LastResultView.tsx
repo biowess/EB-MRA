@@ -59,7 +59,7 @@ export default function LastResultView() {
         <Link
           to="/assessment"
           id="results-start-cta"
-          aria-label="Begin the EBM Readiness Assessment"
+          aria-label="Begin the Medical Readiness Assessment"
           style={{
             display: 'inline-flex',
             fontFamily: 'var(--font-body)',
