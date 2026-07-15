@@ -121,8 +121,8 @@
 
   /* Glassmorphism treatment */
   background-color: rgba(247, 243, 237, 0.85); /* var(--color-bg) with opacity */
-  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   border-top: 1px solid rgba(217, 208, 196, 0.6); /* Subtle border */
   box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.02);
   
