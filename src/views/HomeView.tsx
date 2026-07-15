@@ -23,7 +23,7 @@ const FEATURES = [
   {
     id: 'feature-questions',
     title: '104 Calibrated Items',
-    desc: 'Likert-scale and scenario-based questions validated for medical education contexts.',
+    desc: 'Likert-scale and scenario-based questions designed for premedical and early-trainee readiness.',
   },
   {
     id: 'feature-report',
@@ -105,7 +105,7 @@ export default function HomeView() {
         </motion.h1>
 
         <motion.p className={styles.subtitle} variants={heroItem}>
-          A self-reflection tool for medical students and clinicians. Understand
+          A self-reflection tool for premedical students and early trainees. Understand
           where you stand across eight medical readiness domains and receive a
           detailed, personalised report.
         </motion.p>
