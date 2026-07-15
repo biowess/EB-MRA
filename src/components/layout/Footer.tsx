@@ -87,7 +87,7 @@ export default function Footer() {
         <nav className={styles.linkCol} aria-label="Resource links">
           <span className={styles.colHeading}>Resources</span>
           <a
-            href="https://github.com"
+            href="https://github.com/biowess/EB-MRA"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.footerLink}
@@ -95,7 +95,7 @@ export default function Footer() {
             GitHub Repository <ExternalIcon />
           </a>
           <a
-            href="https://github.com/issues"
+            href="https://github.com/biowess/EB-MRA/issues"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.footerLink}
