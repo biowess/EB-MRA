@@ -106,7 +106,7 @@ export default function HomeView() {
 
         <motion.p className={styles.subtitle} variants={heroItem}>
           A self-reflection tool for medical students and clinicians. Understand
-          where you stand across eight EBM-readiness domains and receive a
+          where you stand across eight medical readiness domains and receive a
           detailed, personalised report.
         </motion.p>
 
@@ -119,7 +119,7 @@ export default function HomeView() {
             to="/assessment"
             className={styles.cta}
             id="home-start-cta"
-            aria-label="Begin the EBM Readiness Assessment"
+            aria-label="Begin the Medical Readiness Assessment"
           >
             Begin Assessment
             <span className={styles.ctaArrow} aria-hidden="true">
