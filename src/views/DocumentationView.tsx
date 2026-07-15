@@ -206,7 +206,7 @@ export default function DocumentationView() {
               <p className={styles.prose}>Concretely, the instrument aims to:</p>
               <ol style={{ paddingLeft: 'var(--space-6)', marginTop: 'var(--space-4)', lineHeight: 'var(--leading-relaxed)' }}>
                 <li style={{ marginBottom: 'var(--space-3)', fontFamily: 'var(--font-body)', fontSize: 'var(--text-base)', color: 'var(--color-ink)' }}>
-                  Give the respondent a structured, multi-domain snapshot of self-reported tendencies relevant to EBM practice.
+                  Give the respondent a structured, multi-domain snapshot of self-reported tendencies relevant to medical practice.
                 </li>
                 <li style={{ marginBottom: 'var(--space-3)', fontFamily: 'var(--font-body)', fontSize: 'var(--text-base)', color: 'var(--color-ink)' }}>
                   Translate that snapshot into plain-language, actionable feedback — strengths to leverage, growth edges to work on, and concrete next steps — rather than a bare numeric score.
