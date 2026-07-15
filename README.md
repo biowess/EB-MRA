@@ -80,8 +80,8 @@ If you or someone you know is in crisis, this app is not a substitute for profes
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/ebmra-app.git
-cd ebmra-app/ebmra-app
+git clone https://github.com/<your-username>/EM-BRA.git
+cd EM-BRA
 
 # Install dependencies
 npm install
@@ -105,22 +105,21 @@ Requires Node.js 20 or later.
 
 ```text
 ebmra-app/
-├── ebmraspec.md          # Full technical specification
+├── SPECS.md          # Full technical specification
 ├── ALGORITHM.md          # Scoring pipeline walkthrough
-├── LICENSE
-└── ebmra-app/            # Vite + React application
-    ├── src/
-    │   ├── data/         # Questions, weights, domains, profiles, rules
-    │   ├── engine/       # Pure scoring functions
-    │   │   ├── contribution.ts
-    │   │   ├── domainScore.ts
-    │   │   ├── validityChecks.ts
-    │   │   └── profileAssignment.ts
-    │   ├── hooks/        # useAssessment, useScoringResult
-    │   ├── components/   # Question renderers, gates, layout
-    │   ├── views/        # Home, Assessment, Report, FAQ, and more
-    │   └── types/        # Shared TypeScript types
-    └── tests/            # Integration tests
+├── LICENSE           # Vite + React application
+├── src/
+│   ├── data/         # Questions, weights, domains, profiles, rules
+│   ├── engine/       # Pure scoring functions
+│   │   ├── contribution.ts
+│   │   ├── domainScore.ts
+│   │   ├── validityChecks.ts
+│   │   └── profileAssignment.ts
+│   ├── hooks/        # useAssessment, useScoringResult
+│   ├── components/   # Question renderers, gates, layout
+│   ├── views/        # Home, Assessment, Report, FAQ, and more
+│   └── types/        # Shared TypeScript types
+└── tests/            # Integration tests
 ```
 
 ## How scoring works
