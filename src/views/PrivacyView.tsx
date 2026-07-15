@@ -257,7 +257,7 @@ export default function PrivacyView() {
               <p>
                 Contact via:{' '}
                 <a
-                  href="https://github.com/issues"
+                  href="https://github.com/biowess/EB-MRA/issues"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
