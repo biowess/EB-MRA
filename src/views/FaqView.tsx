@@ -45,16 +45,21 @@ const FAQ_CATEGORIES: FaqCategory[] = [
         answer: (
           <>
             <p>
-              EB-MRA stands for <strong>Evidence Based Medicine Readiness Assessment</strong>. It is a
-              self-administered psychometric instrument designed to help clinicians, medical students,
-              and health professionals gauge their current level of EBM competency across several
-              core domains.
+              EB-MRA stands for <strong>Evidence-Based Medical Readiness Assessment</strong>. It is
+              a 104-item self-report instrument, organized into eight domains, designed to give
+              premedical students, career-changers, and early medical trainees a structured
+              snapshot of self-reported dispositions relevant to readiness for medical training —
+              things like analytical reasoning, intellectual humility, tolerance for ambiguity,
+              empathic communication, ethical reasoning, conscientiousness, and resilience.
             </p>
             <p>
-              Unlike a quiz with right-or-wrong answers, EB-MRA asks you to rate your own confidence
-              and frequency of practice across skills like critically appraising research, applying
-              statistics at the bedside, and integrating patient values — then produces a scored
-              profile you can use for reflection and learning.
+              The "evidence-based" in the name refers to how the instrument itself was built — its
+              construct definitions, item design, and scoring rules are all grounded in the
+              published literature (see the methodology paper, linked in the footer). It is{' '}
+              <em>not</em> a test of your knowledge of evidence-based medicine or critical
+              appraisal skills. Rather than right-or-wrong answers, it asks you to rate your own
+              tendencies and habits of mind, then produces a scored profile meant to support
+              reflection — ideally alongside an advisor or mentor.
             </p>
           </>
         ),
@@ -68,15 +73,19 @@ const FAQ_CATEGORIES: FaqCategory[] = [
               EB-MRA is designed for:
             </p>
             <p>
-              <strong>Clinicians</strong> wanting a structured self-audit of their EBM practice.{' '}
-              <strong>Medical students and residents</strong> building evidence appraisal skills and
-              wanting a baseline.{' '}
-              <strong>Educators and curriculum designers</strong> seeking a diagnostic snapshot of
-              learner readiness before or after teaching interventions.
+              <strong>Premedical undergraduates</strong> exploring or confirming a path toward
+              medicine.{' '}
+              <strong>Postbaccalaureate and career-change candidates</strong> considering medicine
+              as a new direction.{' '}
+              <strong>Early (M1–M2) medical students</strong> reflecting on their own habits early
+              in training.{' '}
+              <strong>Premedical advisors and mentors</strong> using a completed report as a
+              conversation-starter with an advisee.
             </p>
             <p>
-              The tool is <em>not</em> directed at the general public — the items assume familiarity
-              with clinical research, statistics, and healthcare decision-making.
+              The tool is <em>not</em> intended for admissions committees, employers, residency
+              programs, or anyone evaluating another person for admission, hiring, or
+              credentialing — see below.
             </p>
           </>
         ),
@@ -86,23 +95,27 @@ const FAQ_CATEGORIES: FaqCategory[] = [
         question: 'Has this assessment been formally validated?',
         answer: (
           <p>
-            EB-MRA is a <strong>research-stage instrument</strong>. It has not yet undergone full
-            psychometric validation in a large clinical population. You should treat your results as
-            a reflective learning aid, not a certified credential or clinical benchmark. The
-            methodology underpinning the domain structure is documented in the accompanying
-            methodology paper on ResearchGate (link in the footer).
+            No. EB-MRA is a <strong>research-stage, unvalidated instrument</strong>. No reliability
+            statistics (like internal consistency) and no validity evidence yet exist for any of
+            its scores. You should treat your results as a reflective, formative starting point for
+            a conversation with a mentor — not a certified, predictive, or evidence-backed
+            measurement of your readiness for medicine. The full validation roadmap (internal
+            consistency, factor analysis, item response theory, and more) is described in the
+            accompanying methodology paper (link in the footer).
           </p>
         ),
       },
       {
         id: 'diagnosis',
-        question: 'Can I use this to make clinical decisions?',
+        question: 'Can this be used for admissions, hiring, or diagnosis?',
         answer: (
           <p>
-            <strong>No.</strong> EB-MRA is a self-assessment and educational tool only. It does not
-            constitute a diagnostic instrument, clinical decision support, or medical advice.
-            Results must not be used to guide patient care, professional credentialing, or
-            certification decisions. See our full disclaimer in the footer.
+            <strong>No.</strong> EB-MRA is a self-report reflection tool only. It is not a
+            diagnostic instrument, not a mental-health screener, and not validated for use in
+            admissions, hiring, or credentialing decisions of any kind. This is true both because
+            no predictive-validity evidence exists yet, and as an independent ethical position the
+            instrument's authors hold regardless of future validation. See our full disclaimer in
+            the footer.
           </p>
         ),
       },
@@ -117,9 +130,10 @@ const FAQ_CATEGORIES: FaqCategory[] = [
         question: 'How long does the assessment take?',
         answer: (
           <p>
-            Most users complete EB-MRA in <strong>10–20 minutes</strong>. The time varies depending
-            on how carefully you reflect on each item. There is no time limit — you are encouraged to
-            read each question carefully before responding.
+            Most users complete all 104 items in <strong>20–30 minutes</strong>. There is no time
+            limit, but the instrument is designed to be completed in a single sitting rather than
+            in short bursts, since attention decay over a long, interrupted session can affect
+            response quality.
           </p>
         ),
       },
@@ -129,9 +143,10 @@ const FAQ_CATEGORIES: FaqCategory[] = [
         answer: (
           <p>
             Because EB-MRA is a research-stage instrument, we ask for your informed consent before
-            you begin. The consent screen outlines the educational nature of the tool, the absence of
-            data collection, and the limitations of the results. You must acknowledge this before
-            proceeding — this is standard practice for psychometric research instruments.
+            you begin. The consent screen outlines the reflective, formative nature of the tool,
+            the absence of data collection, and the limitations of the results. You must
+            acknowledge this before proceeding — this is standard practice for psychometric
+            research instruments.
           </p>
         ),
       },
@@ -165,11 +180,12 @@ const FAQ_CATEGORIES: FaqCategory[] = [
         question: 'What do the response options mean?',
         answer: (
           <p>
-            Each item uses a <strong>Likert-style rating scale</strong>. Depending on the item type,
-            you may be rating your level of <em>confidence</em> in a skill, the <em>frequency</em>{' '}
-            with which you apply it in practice, or your level of <em>agreement</em> with a statement.
-            The scale and anchors are shown clearly on each question page. Read the prompt carefully —
-            the dimension being rated changes across item sets.
+            Most items use a five-point <strong>agreement scale</strong>, from "Strongly Disagree"
+            to "Strongly Agree." A smaller set of items are scenario-based: you'll read a short,
+            realistic situation and choose the response option that best matches what you'd
+            actually do. Read each item carefully — some are worded so that agreeing reflects a
+            lower standing on the trait being measured, which is a deliberate design choice to
+            reduce automatic, pattern-following answers.
           </p>
         ),
       },
@@ -185,14 +201,15 @@ const FAQ_CATEGORIES: FaqCategory[] = [
         answer: (
           <>
             <p>
-              Items are grouped into <strong>thematic domains</strong> (e.g., Critical Appraisal,
-              Statistical Literacy, Clinical Application). Within each domain, your raw Likert
-              responses are averaged to produce a domain score. An overall composite score is then
-              derived from the domain averages.
+              Items are grouped into <strong>eight domains</strong> (e.g., Scientific & Analytical
+              Reasoning, Empathic Communication & Patient-Centeredness, Resilience & Stress
+              Tolerance). Within each domain, your weighted responses are combined into a domain
+              score on a 0–100 scale. A handful of items also feed validity checks — like a
+              social-desirability index — rather than contributing to a domain score directly.
             </p>
             <p>
-              All scoring happens entirely in your browser — nothing is sent to a server. See the
-              methodology paper for full scoring algorithms.
+              Scoring is fully deterministic and happens entirely in your browser — nothing is
+              sent to a server. See the methodology paper for the full scoring algorithm.
             </p>
           </>
         ),
@@ -203,7 +220,7 @@ const FAQ_CATEGORIES: FaqCategory[] = [
         answer: (
           <>
             <p>
-              Your overall and per-domain scores are reported on a 1–5 scale. The approximate
+              Each of your eight domain scores is reported on a 0–100 scale. The approximate
               interpretive bands are:
             </p>
             <table className={styles.scoreTable} aria-label="Score interpretation bands">
@@ -211,49 +228,47 @@ const FAQ_CATEGORIES: FaqCategory[] = [
                 <tr>
                   <th scope="col">Score</th>
                   <th scope="col">Indicative level</th>
-                  <th scope="col">Typical profile</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>4.5 – 5.0</strong></td>
-                  <td>Advanced</td>
-                  <td>Highly confident, frequent practitioner of EBM skills</td>
+                  <td><strong>75 – 100</strong></td>
+                  <td>Strong</td>
                 </tr>
                 <tr>
-                  <td><strong>3.5 – 4.4</strong></td>
-                  <td>Proficient</td>
-                  <td>Solid foundational competency; some gaps in advanced skills</td>
+                  <td><strong>50 – 74</strong></td>
+                  <td>Established</td>
                 </tr>
                 <tr>
-                  <td><strong>2.5 – 3.4</strong></td>
+                  <td><strong>25 – 49</strong></td>
                   <td>Developing</td>
-                  <td>Emerging competency; regular practice recommended</td>
                 </tr>
                 <tr>
-                  <td><strong>1.0 – 2.4</strong></td>
-                  <td>Foundational</td>
-                  <td>Early stage; structured EBM training is advised</td>
+                  <td><strong>0 – 24</strong></td>
+                  <td>Emerging</td>
                 </tr>
               </tbody>
             </table>
             <p style={{ marginTop: 'var(--space-4)' }}>
-              These bands are <em>indicative only</em> and have not been norm-referenced against a
-              validated clinical population.
+              These bands are <em>indicative and descriptive only</em>. They have not been
+              norm-referenced against a validated population, and a "Strong" score should not be
+              read as a guarantee of anything about your future performance in medical training.
             </p>
           </>
         ),
       },
       {
         id: 'domain-scores',
-        question: 'My overall score looks good but one domain is low — should I worry?',
+        question: 'My overall pattern looks good but one domain is low — should I worry?',
         answer: (
           <p>
-            Domain-level variation is expected and is actually one of the most useful aspects of
-            EB-MRA. A lower score in, say, <em>Statistical Literacy</em> while scoring high in{' '}
-            <em>Clinical Application</em> pinpoints exactly where to focus your continuing
-            professional development. Use the domain radar chart on your results page to identify
-            your specific learning priorities.
+            Domain-level variation is expected, and it's actually one of the more useful things
+            EB-MRA surfaces. A lower score in, say, <em>Ambiguity Tolerance</em> alongside a high
+            score in <em>Analytical Reasoning</em> points to a specific, discussable growth edge
+            rather than anything alarming. EB-MRA doesn't produce a single overall composite in the
+            way a typical test does — instead, it's designed to be discussed domain-by-domain,
+            ideally with a mentor, and summarized into one of several descriptive profiles to make
+            that conversation easier.
           </p>
         ),
       },
@@ -292,8 +307,8 @@ const FAQ_CATEGORIES: FaqCategory[] = [
         question: 'What is stored in my browser?',
         answer: (
           <p>
-            If you complete an assessment, your <em>scored result</em> (domain scores and composite
-            score — not individual item responses) is saved to your browser's{' '}
+            If you complete an assessment, your <em>scored result</em> (domain scores and profile
+            — not individual item responses) is saved to your browser's{' '}
             <code>localStorage</code> under the key <code>ebmra_last_result</code>. This data never
             leaves your device. You can delete it at any time through your browser's developer tools
             (<kbd>F12</kbd> → Application → Local Storage) or by clearing site data in your browser
@@ -515,7 +530,7 @@ export default function FaqView() {
             <div className={styles.ctaBlock}>
               <h2>Ready to take the assessment?</h2>
               <p>
-                EB-MRA takes 10–20 minutes and runs entirely in your browser — no account needed,
+                EB-MRA takes 20–30 minutes and runs entirely in your browser — no account needed,
                 no data collected.
               </p>
               <Link to="/assessment" className={styles.ctaBtn} id="faq-cta-start" aria-label="Begin the Medical Readiness Assessment">
